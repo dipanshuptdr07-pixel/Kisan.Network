@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:I[50772,["/_next/static/chunks/288fv9i32x2mh.js","/_next/static/chunks/0vjon5fzn-gr4.js"],""]
+3:I[90504,["/_next/static/chunks/288fv9i32x2mh.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[90504,["/_next/static/chunks/288fv9i32x2mh.js"],"ViewportBoundary"]
+9:I[90504,["/_next/static/chunks/288fv9i32x2mh.js"],"MetadataBoundary"]
+a:I[48501,["/_next/static/chunks/288fv9i32x2mh.js"],"IconMark"]
+c:I[55379,["/_next/static/chunks/288fv9i32x2mh.js"],"default"]
+d:I[45348,["/_next/static/chunks/288fv9i32x2mh.js"],"default"]
+:HL["/_next/static/chunks/2q5uo1f24v06u.css","style"]
+7:X
+f:X
+f:C
+0:{"buildId":"APTQzCY9iQjsV_N0El0Ul","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"style":{"minHeight":"100dvh","display":"grid","placeItems":"center","padding":24,"background":"var(--bg)","color":"var(--ink)"},"children":["$","section",null,{"className":"card","style":{"width":"min(100%, 520px)","padding":32,"textAlign":"center"},"children":[["$","div",null,{"className":"eyebrow","children":"PAGE NOT FOUND"}],["$","h1",null,{"className":"font-display","style":{"fontSize":28,"margin":"12px 0 8px"},"children":"This workspace page does not exist."}],["$","p",null,{"style":{"color":"var(--muted)","fontSize":14,"lineHeight":1.65},"children":"Check the address or return to sign in to choose a workspace."}],["$","$L2",null,{"href":"/login","className":"btn-primary","style":{"marginTop":12},"children":"Back to sign in"}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/0vjon5fzn-gr4.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Kisan Network — Smart Agriculture"}],["$","meta","1",{"name":"description","content":"One shared workspace for India’s agriculture community."}],["$","link","2",{"rel":"icon","href":"/icon.svg?icon.1cj8gjn3n_f-v.svg","sizes":"any","type":"image/svg+xml"}],["$","$La","3",{}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2q5uo1f24v06u.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/288fv9i32x2mh.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","main",null,{"style":{"minHeight":"100dvh","display":"grid","placeItems":"center","padding":24,"background":"var(--bg)","color":"var(--ink)"},"children":["$","section",null,{"className":"card","style":{"width":"min(100%, 520px)","padding":32,"textAlign":"center"},"children":[["$","div",null,{"className":"eyebrow","children":"PAGE NOT FOUND"}],["$","h1",null,{"className":"font-display","style":{"fontSize":28,"margin":"12px 0 8px"},"children":"This workspace page does not exist."}],["$","p",null,{"style":{"color":"var(--muted)","fontSize":14,"lineHeight":1.65},"children":"Check the address or return to sign in to choose a workspace."}],["$","$L2",null,{"href":"/login","className":"btn-primary","style":{"marginTop":12},"children":"Back to sign in"}]]}]}],[]]}]}]}]]}],"isPartial":"$@10","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@11","rootVaryParams":null,"needsRuntimeRequest":"$@12"}
+5:null
+7:300
+12:true
+7:C
+11:0
+b:"$undefined"
+e:"$undefined"
+10:"$undefined"
+6:"$undefined"

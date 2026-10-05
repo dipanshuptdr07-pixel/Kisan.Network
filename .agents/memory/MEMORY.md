@@ -1,0 +1,2 @@
+- [Supabase roadmap](supabase-roadmap.md) — Keep this milestone on disclosed local demo auth/data; real Supabase auth and persistence are later work.
+- [Next.js static preview](nextjs-static-preview.md) — Keep static export build-only and allow the 127.0.0.1 proxied development origin.

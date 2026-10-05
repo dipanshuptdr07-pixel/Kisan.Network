@@ -1,0 +1,12 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1cns3h7._.js")
+R.c("server/chunks/ssr/0ibb_next_dist_0930-0k._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__124bxzo._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__20t9xs0._.js")
+R.c("server/chunks/ssr/artifacts_kisan-network_app_layout_tsx_0vbo52x._.js")
+R.c("server/chunks/ssr/_0vyo4th._.js")
+R.c("server/chunks/ssr/0ibb_next_dist_client_components_09ienkn._.js")
+R.c("server/chunks/ssr/0ibb_next_dist_client_components_builtin_unauthorized_0bntfi8.js")
+R.c("server/chunks/ssr/1xr3_kisan-network__next-internal_server_app__not-found_page_actions_1g5m16m.js")
+R.m(34767)
+module.exports=R.m(34767).exports

@@ -1,0 +1,3 @@
+module.exports=[36009,a=>{"use strict";var b=a.i(99747);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{children:a})})},"metadata",0,{title:"Kisan Network — Smart Agriculture",description:"One shared workspace for India’s agriculture community."}])},34062,function(a){a.n(a.i(36009))}];
+
+//# sourceMappingURL=artifacts_kisan-network_app_layout_tsx_0vbo52x._.js.map

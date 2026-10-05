@@ -1,0 +1,24 @@
+kind = "web"
+previewPath = "/"
+title = "Kisan Network"
+description = "A mobile-first AgriTech application connecting farmers, buyers, agricultural companies, and experts through role-specific dashboards, local demo authentication, and typed local demo data."
+version = "1.0.0"
+id = "artifacts/kisan-network"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21494
+
+[services.development]
+run = "pnpm --filter @workspace/kisan-network run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kisan-network", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kisan-network/out"
+
+[services.env]
+PORT = "21494"
+BASE_PATH = "/"
