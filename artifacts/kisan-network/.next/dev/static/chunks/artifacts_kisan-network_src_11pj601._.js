@@ -1319,6 +1319,40 @@ const roleFrom = (path)=>{
         'expert'
     ].includes(prefix) ? prefix : null;
 };
+let storageWarningShown = false;
+function warnStorageUnavailable(error) {
+    if (storageWarningShown) return;
+    storageWarningShown = true;
+    console.warn('Kisan Network demo state will only last for this page session because browser storage is unavailable.', error);
+}
+function readDemoStorage(key) {
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    try {
+        return window.localStorage.getItem(key);
+    } catch (error) {
+        warnStorageUnavailable(error);
+        return null;
+    }
+}
+function writeDemoStorage(key, value) {
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    try {
+        window.localStorage.setItem(key, value);
+    } catch (error) {
+        warnStorageUnavailable(error);
+    }
+}
+function removeDemoStorage(key) {
+    if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+    ;
+    try {
+        window.localStorage.removeItem(key);
+    } catch (error) {
+        warnStorageUnavailable(error);
+    }
+}
 function Logo({ pale = false }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "brand",
@@ -1330,12 +1364,12 @@ function Logo({ pale = false }) {
                     strokeWidth: 2.4
                 }, void 0, false, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 98,
+                    lineNumber: 129,
                     columnNumber: 61
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 98,
+                lineNumber: 129,
                 columnNumber: 33
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1357,13 +1391,13 @@ function Logo({ pale = false }) {
                                 children: "network"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 98,
+                                lineNumber: 129,
                                 columnNumber: 236
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 98,
+                        lineNumber: 129,
                         columnNumber: 109
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1377,19 +1411,19 @@ function Logo({ pale = false }) {
                         children: "AGRICULTURE, CONNECTED"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 98,
+                        lineNumber: 129,
                         columnNumber: 308
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 98,
+                lineNumber: 129,
                 columnNumber: 104
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 98,
+        lineNumber: 129,
         columnNumber: 10
     }, this);
 }
@@ -1402,7 +1436,7 @@ function BrandBackdrop() {
                 pale: true
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 101,
+                lineNumber: 132,
                 columnNumber: 40
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1418,7 +1452,7 @@ function BrandBackdrop() {
                         children: "INDIA'S SHARED AGRICULTURE WORKSPACE"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 101,
+                        lineNumber: 132,
                         columnNumber: 80
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1433,7 +1467,7 @@ function BrandBackdrop() {
                             "Good things",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 101,
+                                lineNumber: 132,
                                 columnNumber: 310
                             }, this),
                             "grow ",
@@ -1444,13 +1478,13 @@ function BrandBackdrop() {
                                 children: "together."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 101,
+                                lineNumber: 132,
                                 columnNumber: 320
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 101,
+                        lineNumber: 132,
                         columnNumber: 173
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1463,13 +1497,13 @@ function BrandBackdrop() {
                         children: "From the first seed to the final sale, bring farmers, buyers and agriculture experts into one place."
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 101,
+                        lineNumber: 132,
                         columnNumber: 373
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 101,
+                lineNumber: 132,
                 columnNumber: 52
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1480,13 +1514,13 @@ function BrandBackdrop() {
                 children: "“Smart Agriculture. One Powerful Platform.”"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 101,
+                lineNumber: 132,
                 columnNumber: 552
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 101,
+        lineNumber: 132,
         columnNumber: 10
     }, this);
 }
@@ -1504,18 +1538,18 @@ function ThemeButton({ dark, toggle }) {
             size: 17
         }, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 104,
+            lineNumber: 135,
             columnNumber: 135
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
             size: 17
         }, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 104,
+            lineNumber: 135,
             columnNumber: 152
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 104,
+        lineNumber: 135,
         columnNumber: 10
     }, this);
 }
@@ -1535,7 +1569,7 @@ function LoadingState() {
                 }
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 106,
+                lineNumber: 137,
                 columnNumber: 60
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1547,7 +1581,7 @@ function LoadingState() {
                 }
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 106,
+                lineNumber: 137,
                 columnNumber: 133
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1566,18 +1600,18 @@ function LoadingState() {
                         }
                     }, x, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 106,
+                        lineNumber: 137,
                         columnNumber: 309
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 106,
+                lineNumber: 137,
                 columnNumber: 208
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 106,
+        lineNumber: 137,
         columnNumber: 34
     }, this);
 }
@@ -1609,12 +1643,12 @@ function StatePanel({ title, detail, action }) {
                     size: 22
                 }, void 0, false, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 107,
+                    lineNumber: 138,
                     columnNumber: 391
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 107,
+                lineNumber: 138,
                 columnNumber: 254
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1626,7 +1660,7 @@ function StatePanel({ title, detail, action }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 107,
+                lineNumber: 138,
                 columnNumber: 416
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1640,14 +1674,14 @@ function StatePanel({ title, detail, action }) {
                 children: detail
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 107,
+                lineNumber: 138,
                 columnNumber: 488
             }, this),
             action
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 107,
+        lineNumber: 138,
         columnNumber: 112
     }, this);
 }
@@ -1671,7 +1705,7 @@ function SectionHeading({ title, href, link = 'View all' }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 108,
+                lineNumber: 139,
                 columnNumber: 216
             }, this),
             href && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1690,19 +1724,19 @@ function SectionHeading({ title, href, link = 'View all' }) {
                         size: 14
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 108,
+                        lineNumber: 139,
                         columnNumber: 441
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 108,
+                lineNumber: 139,
                 columnNumber: 318
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 108,
+        lineNumber: 139,
         columnNumber: 119
     }, this);
 }
@@ -1731,7 +1765,7 @@ function StatCard({ label, value, note, icon: Icon, positive = true }) {
                         children: label
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 110,
+                        lineNumber: 141,
                         columnNumber: 157
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1748,18 +1782,18 @@ function StatCard({ label, value, note, icon: Icon, positive = true }) {
                             size: 17
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 110,
+                            lineNumber: 141,
                             columnNumber: 373
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 110,
+                        lineNumber: 141,
                         columnNumber: 235
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 110,
+                lineNumber: 141,
                 columnNumber: 76
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1771,7 +1805,7 @@ function StatCard({ label, value, note, icon: Icon, positive = true }) {
                 children: value
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 110,
+                lineNumber: 141,
                 columnNumber: 403
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1788,13 +1822,13 @@ function StatCard({ label, value, note, icon: Icon, positive = true }) {
                         size: 13
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 110,
+                        lineNumber: 141,
                         columnNumber: 609
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDownRight$3e$__["ArrowDownRight"], {
                         size: 13
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 110,
+                        lineNumber: 141,
                         columnNumber: 635
                     }, this),
                     " ",
@@ -1802,13 +1836,13 @@ function StatCard({ label, value, note, icon: Icon, positive = true }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 110,
+                lineNumber: 141,
                 columnNumber: 474
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 110,
+        lineNumber: 141,
         columnNumber: 10
     }, this);
 }
@@ -1830,7 +1864,7 @@ function TinyAvatar({ text, size = 36 }) {
         children: text
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 112,
+        lineNumber: 143,
         columnNumber: 82
     }, this);
 }
@@ -1860,12 +1894,12 @@ function PriceRows({ compact = false }) {
                             size: 16
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 114,
+                            lineNumber: 145,
                             columnNumber: 324
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 114,
+                        lineNumber: 145,
                         columnNumber: 185
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1882,7 +1916,7 @@ function PriceRows({ compact = false }) {
                                 children: item.crop
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 114,
+                                lineNumber: 145,
                                 columnNumber: 381
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1894,13 +1928,13 @@ function PriceRows({ compact = false }) {
                                 children: item.market
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 114,
+                                lineNumber: 145,
                                 columnNumber: 440
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 114,
+                        lineNumber: 145,
                         columnNumber: 348
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1919,7 +1953,7 @@ function PriceRows({ compact = false }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 114,
+                                lineNumber: 145,
                                 columnNumber: 558
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1934,24 +1968,24 @@ function PriceRows({ compact = false }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 114,
+                                lineNumber: 145,
                                 columnNumber: 643
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 114,
+                        lineNumber: 145,
                         columnNumber: 525
                     }, this)
                 ]
             }, item.id, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 114,
+                lineNumber: 145,
                 columnNumber: 60
             }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 114,
+        lineNumber: 145,
         columnNumber: 10
     }, this);
 }
@@ -1985,12 +2019,12 @@ function CropRows({ data = seedCrops }) {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 117,
+                            lineNumber: 148,
                             columnNumber: 314
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 117,
+                        lineNumber: 148,
                         columnNumber: 160
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2017,13 +2051,13 @@ function CropRows({ data = seedCrops }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 148,
                                         columnNumber: 413
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 117,
+                                lineNumber: 148,
                                 columnNumber: 359
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2039,13 +2073,13 @@ function CropRows({ data = seedCrops }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 117,
+                                lineNumber: 148,
                                 columnNumber: 494
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 117,
+                        lineNumber: 148,
                         columnNumber: 337
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2056,18 +2090,18 @@ function CropRows({ data = seedCrops }) {
                         children: crop.harvest
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 117,
+                        lineNumber: 148,
                         columnNumber: 598
                     }, this)
                 ]
             }, crop.id, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 117,
+                lineNumber: 148,
                 columnNumber: 35
             }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 117,
+        lineNumber: 148,
         columnNumber: 10
     }, this);
 }
@@ -2097,12 +2131,12 @@ function OrderRows({ list = orders }) {
                             size: 17
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 120,
+                            lineNumber: 151,
                             columnNumber: 297
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 120,
+                        lineNumber: 151,
                         columnNumber: 158
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2130,13 +2164,13 @@ function OrderRows({ list = orders }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 151,
                                         columnNumber: 411
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 120,
+                                lineNumber: 151,
                                 columnNumber: 356
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2152,13 +2186,13 @@ function OrderRows({ list = orders }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 120,
+                                lineNumber: 151,
                                 columnNumber: 488
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 120,
+                        lineNumber: 151,
                         columnNumber: 323
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2174,7 +2208,7 @@ function OrderRows({ list = orders }) {
                                 children: order.amount
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 120,
+                                lineNumber: 151,
                                 columnNumber: 625
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2186,24 +2220,24 @@ function OrderRows({ list = orders }) {
                                 children: order.status
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 120,
+                                lineNumber: 151,
                                 columnNumber: 687
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 120,
+                        lineNumber: 151,
                         columnNumber: 592
                     }, this)
                 ]
             }, order.id, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 120,
+                lineNumber: 151,
                 columnNumber: 32
             }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 120,
+        lineNumber: 151,
         columnNumber: 10
     }, this);
 }
@@ -2247,13 +2281,13 @@ function Workspace() {
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Workspace.useEffect": ()=>{
-            const savedSession = localStorage.getItem('kn-demo-session') === '1';
-            const savedRoleValue = localStorage.getItem('kn-demo-role');
+            const savedSession = readDemoStorage('kn-demo-session') === '1';
+            const savedRoleValue = readDemoStorage('kn-demo-role');
             const savedRole = (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$kisan$2d$network$2f$src$2f$data$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isRole"])(savedRoleValue) ? savedRoleValue : null;
-            if (savedRoleValue && !savedRole) localStorage.removeItem('kn-demo-role');
-            const savedAdmin = localStorage.getItem('kn-demo-admin') === '1';
-            const savedPhone = localStorage.getItem('kn-demo-phone') || '';
-            const savedDark = localStorage.getItem('kn-theme') === 'dark';
+            if (savedRoleValue && !savedRole) removeDemoStorage('kn-demo-role');
+            const savedAdmin = readDemoStorage('kn-demo-admin') === '1';
+            const savedPhone = readDemoStorage('kn-demo-phone') || '';
+            const savedDark = readDemoStorage('kn-theme') === 'dark';
             setSession(savedSession);
             setRole(savedRole);
             setAdmin(savedAdmin);
@@ -2318,7 +2352,7 @@ function Workspace() {
         "Workspace.useEffect": ()=>{
             if (!ready) return;
             document.documentElement.classList.toggle('dark', dark);
-            localStorage.setItem('kn-theme', dark ? 'dark' : 'light');
+            writeDemoStorage('kn-theme', dark ? 'dark' : 'light');
         }
     }["Workspace.useEffect"], [
         dark,
@@ -2348,9 +2382,9 @@ function Workspace() {
         window.setTimeout(()=>setNotice(''), 2800);
     };
     const signOut = ()=>{
-        localStorage.removeItem('kn-demo-session');
-        localStorage.removeItem('kn-demo-role');
-        localStorage.removeItem('kn-demo-admin');
+        removeDemoStorage('kn-demo-session');
+        removeDemoStorage('kn-demo-role');
+        removeDemoStorage('kn-demo-admin');
         setSession(false);
         setRole(null);
         setAdmin(false);
@@ -2367,29 +2401,29 @@ function Workspace() {
                 children: "Try again"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 198,
+                lineNumber: 229,
                 columnNumber: 183
             }, this)
         }, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 198,
+            lineNumber: 229,
             columnNumber: 61
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 198,
+        lineNumber: 229,
         columnNumber: 34
     }, this);
     if (!ready || dataStatus === 'loading') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "app-frame",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LoadingState, {}, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 199,
+            lineNumber: 230,
             columnNumber: 72
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 199,
+        lineNumber: 230,
         columnNumber: 45
     }, this);
     if (pathname === '/' || [
@@ -2399,12 +2433,12 @@ function Workspace() {
         className: "app-frame",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LoadingState, {}, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 200,
+            lineNumber: 231,
             columnNumber: 241
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 200,
+        lineNumber: 231,
         columnNumber: 214
     }, this);
     if (pathname === '/login') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2412,7 +2446,7 @@ function Workspace() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BrandBackdrop, {}, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 202,
+                lineNumber: 233,
                 columnNumber: 61
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2427,12 +2461,12 @@ function Workspace() {
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {}, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 202,
+                                lineNumber: 233,
                                 columnNumber: 194
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
+                            lineNumber: 233,
                             columnNumber: 139
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2440,7 +2474,7 @@ function Workspace() {
                             children: "WELCOME TO KISAN NETWORK"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
+                            lineNumber: 233,
                             columnNumber: 207
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2454,14 +2488,14 @@ function Workspace() {
                                 "Your work, growing",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 233,
                                     columnNumber: 374
                                 }, this),
                                 "in one place."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
+                            lineNumber: 233,
                             columnNumber: 262
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2474,7 +2508,7 @@ function Workspace() {
                             children: "Sign in with your Indian mobile number to continue."
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
+                            lineNumber: 233,
                             columnNumber: 397
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -2486,7 +2520,7 @@ function Workspace() {
                                     return;
                                 }
                                 setBusy(true);
-                                localStorage.setItem('kn-demo-phone', phone);
+                                writeDemoStorage('kn-demo-phone', phone);
                                 window.setTimeout(()=>{
                                     setBusy(false);
                                     router.push('/verify');
@@ -2502,8 +2536,8 @@ function Workspace() {
                                     children: "MOBILE NUMBER"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 822
+                                    lineNumber: 233,
+                                    columnNumber: 818
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
@@ -2522,8 +2556,8 @@ function Workspace() {
                                             children: "+91"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 202,
-                                            columnNumber: 947
+                                            lineNumber: 233,
+                                            columnNumber: 943
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                             className: "field",
@@ -2535,14 +2569,14 @@ function Workspace() {
                                             onChange: (e)=>setPhone(e.target.value.replace(/\D/g, ''))
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 202,
-                                            columnNumber: 1048
+                                            lineNumber: 233,
+                                            columnNumber: 1044
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 911
+                                    lineNumber: 233,
+                                    columnNumber: 907
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
@@ -2553,8 +2587,8 @@ function Workspace() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 1248
+                                    lineNumber: 233,
+                                    columnNumber: 1244
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "btn-primary",
@@ -2571,24 +2605,24 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 202,
-                                                columnNumber: 1469
+                                                lineNumber: 233,
+                                                columnNumber: 1465
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 202,
-                                        columnNumber: 1449
+                                        lineNumber: 233,
+                                        columnNumber: 1445
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 1317
+                                    lineNumber: 233,
+                                    columnNumber: 1313
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
+                            lineNumber: 233,
                             columnNumber: 532
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2610,15 +2644,15 @@ function Workspace() {
                                     children: "123456"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 1718
+                                    lineNumber: 233,
+                                    columnNumber: 1714
                                 }, this),
                                 "."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
-                            columnNumber: 1512
+                            lineNumber: 233,
+                            columnNumber: 1508
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
@@ -2628,8 +2662,8 @@ function Workspace() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
-                            columnNumber: 1777
+                            lineNumber: 233,
+                            columnNumber: 1773
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             className: "btn-secondary",
@@ -2638,8 +2672,8 @@ function Workspace() {
                                 fontSize: 12
                             },
                             onClick: ()=>{
-                                localStorage.setItem('kn-demo-admin', '1');
-                                localStorage.setItem('kn-demo-session', '1');
+                                writeDemoStorage('kn-demo-admin', '1');
+                                writeDemoStorage('kn-demo-session', '1');
                                 setAdmin(true);
                                 setSession(true);
                                 router.push('/admin');
@@ -2649,15 +2683,15 @@ function Workspace() {
                                     size: 15
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 202,
-                                    columnNumber: 2074
+                                    lineNumber: 233,
+                                    columnNumber: 2062
                                 }, this),
                                 " Enter separate admin demo"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
-                            columnNumber: 1848
+                            lineNumber: 233,
+                            columnNumber: 1844
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             style: {
@@ -2670,24 +2704,24 @@ function Workspace() {
                             children: "Admin access is a client-side demo gate only—not production authorization."
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 202,
-                            columnNumber: 2133
+                            lineNumber: 233,
+                            columnNumber: 2121
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 202,
+                    lineNumber: 233,
                     columnNumber: 106
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 202,
+                lineNumber: 233,
                 columnNumber: 77
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 202,
+        lineNumber: 233,
         columnNumber: 34
     }, this);
     if (pathname === '/verify') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2695,7 +2729,7 @@ function Workspace() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BrandBackdrop, {}, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 204,
+                lineNumber: 235,
                 columnNumber: 62
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2705,7 +2739,7 @@ function Workspace() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {}, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
+                            lineNumber: 235,
                             columnNumber: 140
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2716,7 +2750,7 @@ function Workspace() {
                             children: "DEMO PHONE VERIFICATION"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
+                            lineNumber: 235,
                             columnNumber: 147
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2729,7 +2763,7 @@ function Workspace() {
                             children: "Confirm your number"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
+                            lineNumber: 235,
                             columnNumber: 224
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2746,18 +2780,18 @@ function Workspace() {
                                     },
                                     children: [
                                         "+91 ",
-                                        phone || localStorage.getItem('kn-demo-phone')
+                                        phone || readDemoStorage('kn-demo-phone')
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
+                                    lineNumber: 235,
                                     columnNumber: 432
                                 }, this),
                                 "."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
+                            lineNumber: 235,
                             columnNumber: 337
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2775,23 +2809,23 @@ function Workspace() {
                                     children: "No SMS is sent."
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 681
+                                    lineNumber: 235,
+                                    columnNumber: 676
                                 }, this),
                                 " This is a local demo verification. Use code ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                     children: "123456"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 758
+                                    lineNumber: 235,
+                                    columnNumber: 753
                                 }, this),
                                 "."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
-                            columnNumber: 533
+                            lineNumber: 235,
+                            columnNumber: 528
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             onSubmit: (e)=>{
@@ -2803,8 +2837,8 @@ function Workspace() {
                                 }
                                 setBusy(true);
                                 window.setTimeout(()=>{
-                                    localStorage.setItem('kn-demo-session', '1');
-                                    localStorage.removeItem('kn-demo-role');
+                                    writeDemoStorage('kn-demo-session', '1');
+                                    removeDemoStorage('kn-demo-role');
                                     setSession(true);
                                     setRole(null);
                                     setBusy(false);
@@ -2821,8 +2855,8 @@ function Workspace() {
                                     children: "6-DIGIT DEMO CODE"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1134
+                                    lineNumber: 235,
+                                    columnNumber: 1119
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     className: "field",
@@ -2838,8 +2872,8 @@ function Workspace() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1227
+                                    lineNumber: 235,
+                                    columnNumber: 1212
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
@@ -2850,8 +2884,8 @@ function Workspace() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1445
+                                    lineNumber: 235,
+                                    columnNumber: 1430
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     className: "btn-primary",
@@ -2868,25 +2902,25 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 204,
-                                                columnNumber: 1658
+                                                lineNumber: 235,
+                                                columnNumber: 1643
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 204,
-                                        columnNumber: 1638
+                                        lineNumber: 235,
+                                        columnNumber: 1623
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1514
+                                    lineNumber: 235,
+                                    columnNumber: 1499
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
-                            columnNumber: 788
+                            lineNumber: 235,
+                            columnNumber: 783
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
@@ -2910,8 +2944,8 @@ function Workspace() {
                                     children: "Change number"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1787
+                                    lineNumber: 235,
+                                    columnNumber: 1772
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     disabled: resendWait > 0 || busy,
@@ -2930,30 +2964,30 @@ function Workspace() {
                                     children: resendWait ? `Try again in ${resendWait}s` : 'Resend demo code'
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 1940
+                                    lineNumber: 235,
+                                    columnNumber: 1925
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 204,
-                            columnNumber: 1701
+                            lineNumber: 235,
+                            columnNumber: 1686
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 204,
+                    lineNumber: 235,
                     columnNumber: 107
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 204,
+                lineNumber: 235,
                 columnNumber: 78
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 204,
+        lineNumber: 235,
         columnNumber: 35
     }, this);
     if (pathname === '/onboarding') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2973,7 +3007,7 @@ function Workspace() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {}, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 207,
+                        lineNumber: 238,
                         columnNumber: 86
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ThemeButton, {
@@ -2981,13 +3015,13 @@ function Workspace() {
                         toggle: ()=>setDark(!dark)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 207,
+                        lineNumber: 238,
                         columnNumber: 93
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 207,
+                lineNumber: 238,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3002,7 +3036,7 @@ function Workspace() {
                         children: "YOUR NETWORK, YOUR WAY"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 208,
+                        lineNumber: 239,
                         columnNumber: 76
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -3015,7 +3049,7 @@ function Workspace() {
                         children: "What brings you to Kisan Network?"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 208,
+                        lineNumber: 239,
                         columnNumber: 129
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3027,13 +3061,13 @@ function Workspace() {
                         children: "Choose the workspace that fits your day. You can change this later in your profile."
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 208,
+                        lineNumber: 239,
                         columnNumber: 278
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 208,
+                lineNumber: 239,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3058,7 +3092,7 @@ function Workspace() {
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         className: "card role-card",
                         onClick: ()=>{
-                            localStorage.setItem('kn-demo-role', r);
+                            writeDemoStorage('kn-demo-role', r);
                             setRole(r);
                             router.push(`/${r}`);
                         },
@@ -3085,12 +3119,12 @@ function Workspace() {
                                     size: 21
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 242,
                                     columnNumber: 146
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 211,
+                                lineNumber: 242,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3103,7 +3137,7 @@ function Workspace() {
                                 children: roleNames[r]
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 212,
+                                lineNumber: 243,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3115,7 +3149,7 @@ function Workspace() {
                                 children: roleHindi[r]
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 213,
+                                lineNumber: 244,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3129,7 +3163,7 @@ function Workspace() {
                                 children: roleDescriptions[r]
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 214,
+                                lineNumber: 245,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3143,24 +3177,24 @@ function Workspace() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 215,
+                                    lineNumber: 246,
                                     columnNumber: 98
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 215,
+                                lineNumber: 246,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, r, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 210,
+                        lineNumber: 241,
                         columnNumber: 139
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 209,
+                lineNumber: 240,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3173,13 +3207,13 @@ function Workspace() {
                 children: "A role unlocks a dedicated workspace built around what you do."
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 218,
+                lineNumber: 249,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 206,
+        lineNumber: 237,
         columnNumber: 39
     }, this);
     const activeRole = isAdmin ? null : role;
@@ -3221,7 +3255,7 @@ function Workspace() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {}, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 233,
+                        lineNumber: 264,
                         columnNumber: 32
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3232,7 +3266,7 @@ function Workspace() {
                         children: isAdmin ? 'DEMO CONSOLE' : role?.toUpperCase() + ' WORKSPACE'
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 233,
+                        lineNumber: 264,
                         columnNumber: 39
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -3257,7 +3291,7 @@ function Workspace() {
                                         children: item.section
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 264,
                                         columnNumber: 318
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3268,25 +3302,25 @@ function Workspace() {
                                                 size: 17
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 233,
+                                                lineNumber: 264,
                                                 columnNumber: 491
                                             }, this),
                                             item.label
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 264,
                                         columnNumber: 409
                                     }, this)
                                 ]
                             }, item.href, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 233,
+                                lineNumber: 264,
                                 columnNumber: 282
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 233,
+                        lineNumber: 264,
                         columnNumber: 160
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3314,7 +3348,7 @@ function Workspace() {
                                             color: "var(--amber)"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 233,
+                                            lineNumber: 264,
                                             columnNumber: 743
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3327,7 +3361,7 @@ function Workspace() {
                                                     children: "Nashik, Maharashtra"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 264,
                                                     columnNumber: 790
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3338,24 +3372,24 @@ function Workspace() {
                                                     children: "29° · Partly sunny"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 264,
                                                     columnNumber: 857
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 233,
+                                            lineNumber: 264,
                                             columnNumber: 785
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 233,
+                                    lineNumber: 264,
                                     columnNumber: 687
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 233,
+                                lineNumber: 264,
                                 columnNumber: 578
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3371,26 +3405,26 @@ function Workspace() {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 264,
                                         columnNumber: 1051
                                     }, this),
                                     "Log out"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 233,
+                                lineNumber: 264,
                                 columnNumber: 947
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 233,
+                        lineNumber: 264,
                         columnNumber: 546
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 233,
+                lineNumber: 264,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3421,7 +3455,7 @@ function Workspace() {
                                                 children: "›"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 198
                                             }, this),
                                             " ",
@@ -3432,13 +3466,13 @@ function Workspace() {
                                                 children: isAdmin ? 'Admin demo' : roleNames[role]
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 239
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 116
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3450,7 +3484,7 @@ function Workspace() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 330
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3466,13 +3500,13 @@ function Workspace() {
                                         }).format(new Date())
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 413
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 234,
+                                lineNumber: 265,
                                 columnNumber: 59
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3495,7 +3529,7 @@ function Workspace() {
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 828
                                             }, this),
                                             "Search anything ",
@@ -3506,13 +3540,13 @@ function Workspace() {
                                                 children: "⌘ K"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 863
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 656
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ThemeButton, {
@@ -3520,7 +3554,7 @@ function Workspace() {
                                         toggle: ()=>setDark(!dark)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 909
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3536,7 +3570,7 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 1109
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3551,13 +3585,13 @@ function Workspace() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 1126
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 963
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3573,32 +3607,32 @@ function Workspace() {
                                                 size: 29
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 1399
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                 size: 13
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 265,
                                                 columnNumber: 1510
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 265,
                                         columnNumber: 1240
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 234,
+                                lineNumber: 265,
                                 columnNumber: 600
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 234,
+                        lineNumber: 265,
                         columnNumber: 32
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -3621,7 +3655,7 @@ function Workspace() {
                                                 children: isHome ? 'YOUR DAILY FIELD NOTE' : isAdmin ? 'RESTRICTED DEMO AREA' : roleNames[role] + ' WORKSPACE'
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 138
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -3634,7 +3668,7 @@ function Workspace() {
                                                 children: isHome && role === 'farmer' ? `Good morning, ${demoFarmer.name.split(' ')[0]}.` : title
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 262
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3653,7 +3687,7 @@ function Workspace() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                            lineNumber: 236,
+                                                            lineNumber: 267,
                                                             columnNumber: 544
                                                         }, this),
                                                         demoFarmer.location,
@@ -3665,7 +3699,7 @@ function Workspace() {
                                                             children: "·"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                            lineNumber: 236,
+                                                            lineNumber: 267,
                                                             columnNumber: 630
                                                         }, this),
                                                         " ",
@@ -3674,18 +3708,18 @@ function Workspace() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 236,
+                                                    lineNumber: 267,
                                                     columnNumber: 542
                                                 }, this) : pageLead
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 462
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 267,
                                         columnNumber: 133
                                     }, this),
                                     isHome && role === 'farmer' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3696,14 +3730,14 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 801
                                             }, this),
                                             " Add crop"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 267,
                                         columnNumber: 747
                                     }, this) : isHome && role === 'buyer' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/buyer/requests",
@@ -3713,14 +3747,14 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 911
                                             }, this),
                                             " New requirement"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 267,
                                         columnNumber: 858
                                     }, this) : isHome && role === 'expert' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/expert/questions",
@@ -3730,20 +3764,20 @@ function Workspace() {
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 1031
                                             }, this),
                                             " Answer a question"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 267,
                                         columnNumber: 976
                                     }, this) : null
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 236,
+                                lineNumber: 267,
                                 columnNumber: 9
                             }, this),
                             isHome && role === 'farmer' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FarmerHome, {
@@ -3751,28 +3785,28 @@ function Workspace() {
                                 toast: toast
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 237,
+                                lineNumber: 268,
                                 columnNumber: 35
                             }, this),
                             isHome && role === 'buyer' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BuyerHome, {
                                 toast: toast
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 238,
+                                lineNumber: 269,
                                 columnNumber: 34
                             }, this),
                             isHome && role === 'company' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CompanyHome, {
                                 toast: toast
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 239,
+                                lineNumber: 270,
                                 columnNumber: 36
                             }, this),
                             isHome && role === 'expert' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ExpertHome, {
                                 toast: toast
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 240,
+                                lineNumber: 271,
                                 columnNumber: 35
                             }, this),
                             !isHome && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RouteContent, {
@@ -3797,19 +3831,19 @@ function Workspace() {
                                 navigate: (path)=>router.push(path)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 241,
+                                lineNumber: 272,
                                 columnNumber: 19
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 235,
+                        lineNumber: 266,
                         columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 234,
+                lineNumber: 265,
                 columnNumber: 5
             }, this),
             !isAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -3823,20 +3857,20 @@ function Workspace() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 275,
                                     columnNumber: 151
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: item.label.split(' ')[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 275,
                                     columnNumber: 173
                                 }, this)
                             ]
                         }, item.href, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 244,
+                            lineNumber: 275,
                             columnNumber: 67
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3858,26 +3892,26 @@ function Workspace() {
                                 size: 18
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 244,
+                                lineNumber: 275,
                                 columnNumber: 444
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "More"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 244,
+                                lineNumber: 275,
                                 columnNumber: 461
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 244,
+                        lineNumber: 275,
                         columnNumber: 221
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 244,
+                lineNumber: 275,
                 columnNumber: 16
             }, this),
             menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3914,7 +3948,7 @@ function Workspace() {
                                     children: "Your workspace"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 245,
+                                    lineNumber: 276,
                                     columnNumber: 413
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3927,13 +3961,13 @@ function Workspace() {
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 245,
+                                    lineNumber: 276,
                                     columnNumber: 469
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 245,
+                            lineNumber: 276,
                             columnNumber: 316
                         }, this),
                         nav.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3945,14 +3979,14 @@ function Workspace() {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 245,
+                                        lineNumber: 276,
                                         columnNumber: 710
                                     }, this),
                                     item.label
                                 ]
                             }, item.href, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 245,
+                                lineNumber: 276,
                                 columnNumber: 617
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3968,25 +4002,25 @@ function Workspace() {
                                     size: 17
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 245,
+                                    lineNumber: 276,
                                     columnNumber: 857
                                 }, this),
                                 "Log out"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 245,
+                            lineNumber: 276,
                             columnNumber: 753
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 245,
+                    lineNumber: 276,
                     columnNumber: 163
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 245,
+                lineNumber: 276,
                 columnNumber: 16
             }, this),
             notice && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4006,13 +4040,13 @@ function Workspace() {
                 children: notice
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 246,
+                lineNumber: 277,
                 columnNumber: 14
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 232,
+        lineNumber: 263,
         columnNumber: 10
     }, this);
 }
@@ -4041,7 +4075,7 @@ function FarmerHome({ data, toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sprout$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sprout$3e$__["Sprout"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 251,
+                        lineNumber: 282,
                         columnNumber: 113
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4051,7 +4085,7 @@ function FarmerHome({ data, toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wallet$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Wallet$3e$__["Wallet"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 251,
+                        lineNumber: 282,
                         columnNumber: 209
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4061,7 +4095,7 @@ function FarmerHome({ data, toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$bag$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingBag$3e$__["ShoppingBag"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 251,
+                        lineNumber: 282,
                         columnNumber: 302
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4071,13 +4105,13 @@ function FarmerHome({ data, toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$cloud$2d$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CloudSun$3e$__["CloudSun"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 251,
+                        lineNumber: 282,
                         columnNumber: 402
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 251,
+                lineNumber: 282,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4091,7 +4125,7 @@ function FarmerHome({ data, toast }) {
                         title: "Your next move"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 252,
+                        lineNumber: 283,
                         columnNumber: 64
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4137,12 +4171,12 @@ function FarmerHome({ data, toast }) {
                                             size: 16
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 283,
                                             columnNumber: 696
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 252,
+                                        lineNumber: 283,
                                         columnNumber: 558
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4154,25 +4188,25 @@ function FarmerHome({ data, toast }) {
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 252,
+                                        lineNumber: 283,
                                         columnNumber: 720
                                     }, this)
                                 ]
                             }, item.label, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 252,
+                                lineNumber: 283,
                                 columnNumber: 329
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 252,
+                        lineNumber: 283,
                         columnNumber: 104
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 252,
+                lineNumber: 283,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4193,20 +4227,20 @@ function FarmerHome({ data, toast }) {
                                 href: "/farmer/crops"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 253,
+                                lineNumber: 284,
                                 columnNumber: 147
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CropRows, {
                                 data: data.slice(0, 3)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 253,
+                                lineNumber: 284,
                                 columnNumber: 202
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 253,
+                        lineNumber: 284,
                         columnNumber: 95
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4220,26 +4254,26 @@ function FarmerHome({ data, toast }) {
                                 href: "/farmer/mandi"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 253,
+                                lineNumber: 284,
                                 columnNumber: 294
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PriceRows, {
                                 compact: true
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 253,
+                                lineNumber: 284,
                                 columnNumber: 353
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 253,
+                        lineNumber: 284,
                         columnNumber: 242
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 253,
+                lineNumber: 284,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4259,20 +4293,20 @@ function FarmerHome({ data, toast }) {
                                 href: "/farmer/orders"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 254,
+                                lineNumber: 285,
                                 columnNumber: 131
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(OrderRows, {
                                 list: orders.slice(0, 2)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 254,
+                                lineNumber: 285,
                                 columnNumber: 192
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 254,
+                        lineNumber: 285,
                         columnNumber: 79
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4287,7 +4321,7 @@ function FarmerHome({ data, toast }) {
                                 link: "Meet experts"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 254,
+                                lineNumber: 285,
                                 columnNumber: 287
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4299,7 +4333,7 @@ function FarmerHome({ data, toast }) {
                                 children: "Get trusted, practical advice from agriculture specialists near you."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 254,
+                                lineNumber: 285,
                                 columnNumber: 374
                             }, this),
                             experts.slice(0, 2).map((person)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4315,7 +4349,7 @@ function FarmerHome({ data, toast }) {
                                             text: person.initials
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 254,
+                                            lineNumber: 285,
                                             columnNumber: 675
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4331,7 +4365,7 @@ function FarmerHome({ data, toast }) {
                                                     children: person.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 285,
                                                     columnNumber: 733
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4343,13 +4377,13 @@ function FarmerHome({ data, toast }) {
                                                     children: person.specialty
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 285,
                                                     columnNumber: 794
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 254,
+                                            lineNumber: 285,
                                             columnNumber: 711
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4362,25 +4396,25 @@ function FarmerHome({ data, toast }) {
                                             children: "Ask"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 254,
+                                            lineNumber: 285,
                                             columnNumber: 884
                                         }, this)
                                     ]
                                 }, person.name, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 254,
+                                    lineNumber: 285,
                                     columnNumber: 549
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 254,
+                        lineNumber: 285,
                         columnNumber: 235
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 254,
+                lineNumber: 285,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4400,7 +4434,7 @@ function FarmerHome({ data, toast }) {
                         size: 15
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 255,
+                        lineNumber: 286,
                         columnNumber: 179
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4409,14 +4443,14 @@ function FarmerHome({ data, toast }) {
                                 children: "2 updates for your farm"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 255,
+                                lineNumber: 286,
                                 columnNumber: 202
                             }, this),
                             " · New buyer interest and an improved onion mandi rate."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 255,
+                        lineNumber: 286,
                         columnNumber: 196
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4428,19 +4462,19 @@ function FarmerHome({ data, toast }) {
                         children: "Review"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 255,
+                        lineNumber: 286,
                         columnNumber: 304
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 255,
+                lineNumber: 286,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 251,
+        lineNumber: 282,
         columnNumber: 10
     }, this);
 }
@@ -4462,7 +4496,7 @@ function BuyerHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$credit$2d$card$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CreditCard$3e$__["CreditCard"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 259,
+                        lineNumber: 290,
                         columnNumber: 113
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4472,7 +4506,7 @@ function BuyerHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 259,
+                        lineNumber: 290,
                         columnNumber: 213
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4482,7 +4516,7 @@ function BuyerHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$cart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingCart$3e$__["ShoppingCart"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 259,
+                        lineNumber: 290,
                         columnNumber: 312
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4492,13 +4526,13 @@ function BuyerHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 259,
+                        lineNumber: 290,
                         columnNumber: 406
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 259,
+                lineNumber: 290,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4529,7 +4563,7 @@ function BuyerHome({ toast }) {
                                     children: "BUYER MARKETPLACE"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 291,
                                     columnNumber: 229
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4542,7 +4576,7 @@ function BuyerHome({ toast }) {
                                     children: "Fresh produce, direct from the field."
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 291,
                                     columnNumber: 303
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4553,13 +4587,13 @@ function BuyerHome({ toast }) {
                                     children: "Browse today's harvests from verified regional growers."
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 291,
                                     columnNumber: 438
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 260,
+                            lineNumber: 291,
                             columnNumber: 224
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4575,24 +4609,24 @@ function BuyerHome({ toast }) {
                                     size: 15
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 291,
                                     columnNumber: 671
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 260,
+                            lineNumber: 291,
                             columnNumber: 548
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 260,
+                    lineNumber: 291,
                     columnNumber: 120
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 260,
+                lineNumber: 291,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4613,7 +4647,7 @@ function BuyerHome({ toast }) {
                                 href: "/buyer/requests"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 261,
+                                lineNumber: 292,
                                 columnNumber: 136
                             }, this),
                             [
@@ -4655,12 +4689,12 @@ function BuyerHome({ toast }) {
                                                 size: 17
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 261,
+                                                lineNumber: 292,
                                                 columnNumber: 652
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 261,
+                                            lineNumber: 292,
                                             columnNumber: 515
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4676,7 +4710,7 @@ function BuyerHome({ toast }) {
                                                     children: r[0]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 292,
                                                     columnNumber: 698
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4688,13 +4722,13 @@ function BuyerHome({ toast }) {
                                                     children: r[1]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 292,
                                                     columnNumber: 752
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 261,
+                                            lineNumber: 292,
                                             columnNumber: 676
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4706,19 +4740,19 @@ function BuyerHome({ toast }) {
                                             children: r[2]
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 261,
+                                            lineNumber: 292,
                                             columnNumber: 830
                                         }, this)
                                     ]
                                 }, r[0], true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 292,
                                     columnNumber: 393
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 261,
+                        lineNumber: 292,
                         columnNumber: 93
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4732,7 +4766,7 @@ function BuyerHome({ toast }) {
                                 href: "/buyer/analytics"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 261,
+                                lineNumber: 292,
                                 columnNumber: 1027
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4751,7 +4785,7 @@ function BuyerHome({ toast }) {
                                         children: "₹4.26L"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 261,
+                                        lineNumber: 292,
                                         columnNumber: 1164
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4763,13 +4797,13 @@ function BuyerHome({ toast }) {
                                         children: "of ₹5.5L plan"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 261,
+                                        lineNumber: 292,
                                         columnNumber: 1224
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 261,
+                                lineNumber: 292,
                                 columnNumber: 1090
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4788,12 +4822,12 @@ function BuyerHome({ toast }) {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 292,
                                     columnNumber: 1405
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 261,
+                                lineNumber: 292,
                                 columnNumber: 1315
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4809,32 +4843,32 @@ function BuyerHome({ toast }) {
                                         children: "77% used"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 261,
+                                        lineNumber: 292,
                                         columnNumber: 1600
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "₹1.24L remaining"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 261,
+                                        lineNumber: 292,
                                         columnNumber: 1621
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 261,
+                                lineNumber: 292,
                                 columnNumber: 1494
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 261,
+                        lineNumber: 292,
                         columnNumber: 984
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 261,
+                lineNumber: 292,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4854,20 +4888,20 @@ function BuyerHome({ toast }) {
                                 href: "/buyer/orders"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 262,
+                                lineNumber: 293,
                                 columnNumber: 120
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(OrderRows, {
                                 list: orders.slice(0, 2)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 262,
+                                lineNumber: 293,
                                 columnNumber: 183
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 262,
+                        lineNumber: 293,
                         columnNumber: 77
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4881,26 +4915,26 @@ function BuyerHome({ toast }) {
                                 href: "/buyer/analytics"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 262,
+                                lineNumber: 293,
                                 columnNumber: 269
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PriceRows, {
                                 compact: true
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 262,
+                                lineNumber: 293,
                                 columnNumber: 333
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 262,
+                        lineNumber: 293,
                         columnNumber: 226
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 262,
+                lineNumber: 293,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4916,25 +4950,25 @@ function BuyerHome({ toast }) {
                             size: 15
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 262,
+                            lineNumber: 293,
                             columnNumber: 493
                         }, this),
                         " Supplier activity · 6 growers active today"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 262,
+                    lineNumber: 293,
                     columnNumber: 393
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 262,
+                lineNumber: 293,
                 columnNumber: 365
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 259,
+        lineNumber: 290,
         columnNumber: 10
     }, this);
 }
@@ -4956,7 +4990,7 @@ function CompanyHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 113
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4966,7 +5000,7 @@ function CompanyHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$package$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Package$3e$__["Package"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 198
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4976,7 +5010,7 @@ function CompanyHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$compass$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Compass$3e$__["Compass"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 295
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -4986,13 +5020,13 @@ function CompanyHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 392
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 266,
+                lineNumber: 297,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5013,7 +5047,7 @@ function CompanyHome({ toast }) {
                                 href: "/company/analytics"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 622
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5043,12 +5077,12 @@ function CompanyHome({ toast }) {
                                         }
                                     }, i, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 818
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 688
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5064,54 +5098,54 @@ function CompanyHome({ toast }) {
                                         children: "Jan"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1078
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Feb"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1094
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Mar"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1110
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Apr"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1126
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "May"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1142
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Jun"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 1158
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 972
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 579
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5125,7 +5159,7 @@ function CompanyHome({ toast }) {
                                 href: "/company/campaigns"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 1229
                             }, this),
                             [
@@ -5159,7 +5193,7 @@ function CompanyHome({ toast }) {
                                                     children: c[0]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 297,
                                                     columnNumber: 1609
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5170,13 +5204,13 @@ function CompanyHome({ toast }) {
                                                     children: c[1]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 297,
                                                     columnNumber: 1628
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 266,
+                                            lineNumber: 297,
                                             columnNumber: 1521
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5195,30 +5229,30 @@ function CompanyHome({ toast }) {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 266,
+                                                lineNumber: 297,
                                                 columnNumber: 1784
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 266,
+                                            lineNumber: 297,
                                             columnNumber: 1699
                                         }, this)
                                     ]
                                 }, c[0], true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 266,
+                                    lineNumber: 297,
                                     columnNumber: 1441
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 1186
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 266,
+                lineNumber: 297,
                 columnNumber: 491
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5238,20 +5272,20 @@ function CompanyHome({ toast }) {
                                 href: "/company/orders"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 2013
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(OrderRows, {
                                 list: orders.slice(0, 2)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 2075
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 1970
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5265,7 +5299,7 @@ function CompanyHome({ toast }) {
                                 href: "/company/farmers"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 2161
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5296,17 +5330,17 @@ function CompanyHome({ toast }) {
                                                     size: 34
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 297,
                                                     columnNumber: 2455
                                                 }, this)
                                             }, x, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 266,
+                                                lineNumber: 297,
                                                 columnNumber: 2363
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 2299
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5317,13 +5351,13 @@ function CompanyHome({ toast }) {
                                         children: "32 new farmer registrations this week"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 2501
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 2225
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5334,32 +5368,32 @@ function CompanyHome({ toast }) {
                                         size: 15
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 2700
                                     }, this),
                                     " View network report"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 266,
+                                lineNumber: 297,
                                 columnNumber: 2598
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 266,
+                        lineNumber: 297,
                         columnNumber: 2118
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 266,
+                lineNumber: 297,
                 columnNumber: 1901
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 266,
+        lineNumber: 297,
         columnNumber: 10
     }, this);
 }
@@ -5381,7 +5415,7 @@ function ExpertHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$question$2d$mark$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CircleHelp$3e$__["CircleHelp"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 113
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -5391,7 +5425,7 @@ function ExpertHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2d$days$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CalendarDays$3e$__["CalendarDays"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 216
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -5401,7 +5435,7 @@ function ExpertHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 314
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -5411,13 +5445,13 @@ function ExpertHome({ toast }) {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2d$3$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock3$3e$__["Clock3"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 394
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 269,
+                lineNumber: 300,
                 columnNumber: 12
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5438,7 +5472,7 @@ function ExpertHome({ toast }) {
                                 href: "/expert/questions"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 631
                             }, this),
                             [
@@ -5476,12 +5510,12 @@ function ExpertHome({ toast }) {
                                                 size: 17
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 300,
                                                 columnNumber: 1139
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 1002
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5497,7 +5531,7 @@ function ExpertHome({ toast }) {
                                                     children: q[0]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 300,
                                                     columnNumber: 1190
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5509,13 +5543,13 @@ function ExpertHome({ toast }) {
                                                     children: q[1]
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 300,
                                                     columnNumber: 1244
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 1168
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5528,19 +5562,19 @@ function ExpertHome({ toast }) {
                                             children: "Answer"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 1322
                                         }, this)
                                     ]
                                 }, q[0], true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 300,
                                     columnNumber: 900
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 588
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5554,7 +5588,7 @@ function ExpertHome({ toast }) {
                                 href: "/expert/consultations"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 1528
                             }, this),
                             consultations.slice(0, 3).map((c)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5569,7 +5603,7 @@ function ExpertHome({ toast }) {
                                             text: c.farmer.split(' ').map((n)=>n[0]).join('')
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 1739
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5582,7 +5616,7 @@ function ExpertHome({ toast }) {
                                                     children: c.farmer
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 300,
                                                     columnNumber: 1806
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5594,7 +5628,7 @@ function ExpertHome({ toast }) {
                                                     children: c.subject
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 300,
                                                     columnNumber: 1864
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5606,31 +5640,31 @@ function ExpertHome({ toast }) {
                                                     children: c.date
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 300,
                                                     columnNumber: 1941
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 1801
                                         }, this)
                                     ]
                                 }, c.id, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 300,
                                     columnNumber: 1637
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 1485
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 269,
+                lineNumber: 300,
                 columnNumber: 498
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5650,7 +5684,7 @@ function ExpertHome({ toast }) {
                                 href: "/expert/knowledge"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 2153
                             }, this),
                             [
@@ -5671,7 +5705,7 @@ function ExpertHome({ toast }) {
                                             color: "var(--green)"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 2481
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5683,7 +5717,7 @@ function ExpertHome({ toast }) {
                                             children: s
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 2523
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5701,19 +5735,19 @@ function ExpertHome({ toast }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 300,
                                             columnNumber: 2581
                                         }, this)
                                     ]
                                 }, s, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 300,
                                     columnNumber: 2362
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 2110
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5729,7 +5763,7 @@ function ExpertHome({ toast }) {
                                 children: "YOUR FIELD IMPACT"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 2760
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5741,7 +5775,7 @@ function ExpertHome({ toast }) {
                                 children: "84 farmers"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 2808
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5753,7 +5787,7 @@ function ExpertHome({ toast }) {
                                 children: "received a useful answer from you this month."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 2896
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5768,31 +5802,31 @@ function ExpertHome({ toast }) {
                                         size: 15
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 269,
+                                        lineNumber: 300,
                                         columnNumber: 3156
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 269,
+                                lineNumber: 300,
                                 columnNumber: 3007
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 269,
+                        lineNumber: 300,
                         columnNumber: 2667
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 269,
+                lineNumber: 300,
                 columnNumber: 2041
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 269,
+        lineNumber: 300,
         columnNumber: 10
     }, this);
 }
@@ -5808,7 +5842,7 @@ function RouteContent(props) {
             children: children
         }, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 280,
+            lineNumber: 311,
             columnNumber: 61
         }, this);
     const searchbox = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5828,7 +5862,7 @@ function RouteContent(props) {
                 }
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 281,
+                lineNumber: 312,
                 columnNumber: 83
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -5841,13 +5875,13 @@ function RouteContent(props) {
                 }
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 281,
+                lineNumber: 312,
                 columnNumber: 168
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 281,
+        lineNumber: 312,
         columnNumber: 19
     }, this);
     const cropForm = showCropForm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -5873,7 +5907,7 @@ function RouteContent(props) {
                         children: "Crop details"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 282,
+                        lineNumber: 313,
                         columnNumber: 265
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5887,13 +5921,13 @@ function RouteContent(props) {
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 282,
+                        lineNumber: 313,
                         columnNumber: 319
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 282,
+                lineNumber: 313,
                 columnNumber: 168
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5920,13 +5954,13 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 282,
+                                lineNumber: 313,
                                 columnNumber: 587
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 282,
+                        lineNumber: 313,
                         columnNumber: 528
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -5950,19 +5984,19 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 282,
+                                lineNumber: 313,
                                 columnNumber: 801
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 282,
+                        lineNumber: 313,
                         columnNumber: 739
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 282,
+                lineNumber: 313,
                 columnNumber: 459
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5975,20 +6009,20 @@ function RouteContent(props) {
                         size: 15
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 282,
+                        lineNumber: 313,
                         columnNumber: 1041
                     }, this),
                     " Save crop"
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 282,
+                lineNumber: 313,
                 columnNumber: 986
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 282,
+        lineNumber: 313,
         columnNumber: 32
     }, this);
     if (admin) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -5997,7 +6031,7 @@ function RouteContent(props) {
                 section: adminSection
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 283,
+                lineNumber: 314,
                 columnNumber: 22
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$kisan$2d$network$2f$src$2f$components$2f$admin$2d$dashboard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AdminDashboard"], {
@@ -6005,13 +6039,13 @@ function RouteContent(props) {
                 toast: toast
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 283,
+                lineNumber: 314,
                 columnNumber: 57
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 283,
+        lineNumber: 314,
         columnNumber: 20
     }, this);
     if (path === '/farmer/crops') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6033,7 +6067,7 @@ function RouteContent(props) {
                                     children: "THIS SEASON"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 284,
+                                    lineNumber: 315,
                                     columnNumber: 157
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6045,13 +6079,13 @@ function RouteContent(props) {
                                     children: "3 crops · 6.5 acres in cultivation"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 284,
+                                    lineNumber: 315,
                                     columnNumber: 199
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 284,
+                            lineNumber: 315,
                             columnNumber: 152
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6062,20 +6096,20 @@ function RouteContent(props) {
                                     size: 15
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 284,
+                                    lineNumber: 315,
                                     columnNumber: 373
                                 }, this),
                                 " Add crop"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 284,
+                            lineNumber: 315,
                             columnNumber: 305
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 284,
+                    lineNumber: 315,
                     columnNumber: 48
                 }, this),
                 cropForm,
@@ -6083,18 +6117,18 @@ function RouteContent(props) {
                     data: crops
                 }, void 0, false, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 284,
+                    lineNumber: 315,
                     columnNumber: 424
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 284,
+            lineNumber: 315,
             columnNumber: 46
         }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 284,
+        lineNumber: 315,
         columnNumber: 37
     }, this);
     if (path === '/farmer/add-crop') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6108,7 +6142,7 @@ function RouteContent(props) {
                     children: "PLAN YOUR SEASON"
                 }, void 0, false, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 285,
+                    lineNumber: 316,
                     columnNumber: 77
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6120,7 +6154,7 @@ function RouteContent(props) {
                     children: "Add a crop to your farm"
                 }, void 0, false, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 285,
+                    lineNumber: 316,
                     columnNumber: 124
                 }, this),
                 cropForm || /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -6145,13 +6179,13 @@ function RouteContent(props) {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 316,
                                     columnNumber: 323
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 285,
+                            lineNumber: 316,
                             columnNumber: 264
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6176,13 +6210,13 @@ function RouteContent(props) {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 316,
                                     columnNumber: 564
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 285,
+                            lineNumber: 316,
                             columnNumber: 491
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6203,40 +6237,40 @@ function RouteContent(props) {
                                             children: "Recently planted"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 285,
+                                            lineNumber: 316,
                                             columnNumber: 892
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Growing"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 285,
+                                            lineNumber: 316,
                                             columnNumber: 925
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Flowering"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 285,
+                                            lineNumber: 316,
                                             columnNumber: 949
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Near harvest"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 285,
+                                            lineNumber: 316,
                                             columnNumber: 975
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 316,
                                     columnNumber: 828
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 285,
+                            lineNumber: 316,
                             columnNumber: 764
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6246,31 +6280,31 @@ function RouteContent(props) {
                                     size: 15
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 316,
                                     columnNumber: 1053
                                 }, this),
                                 " Save crop"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 285,
+                            lineNumber: 316,
                             columnNumber: 1021
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 285,
+                    lineNumber: 316,
                     columnNumber: 234
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 285,
+            lineNumber: 316,
             columnNumber: 75
         }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 285,
+        lineNumber: 316,
         columnNumber: 40
     }, this);
     if (path === '/farmer/mandi' || path === '/buyer/analytics') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6291,7 +6325,7 @@ function RouteContent(props) {
                                     children: "REGIONAL PRICE BOARD"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 286,
+                                    lineNumber: 317,
                                     columnNumber: 164
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6303,13 +6337,13 @@ function RouteContent(props) {
                                     children: "Indicative demo prices · Nashik district"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 286,
+                                    lineNumber: 317,
                                     columnNumber: 215
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 286,
+                            lineNumber: 317,
                             columnNumber: 159
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6320,20 +6354,20 @@ function RouteContent(props) {
                                     size: 14
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 286,
+                                    lineNumber: 317,
                                     columnNumber: 433
                                 }, this),
                                 " Refresh"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 286,
+                            lineNumber: 317,
                             columnNumber: 327
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 286,
+                    lineNumber: 317,
                     columnNumber: 75
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6346,7 +6380,7 @@ function RouteContent(props) {
                             data: prices
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 286,
+                            lineNumber: 317,
                             columnNumber: 516
                         }, this),
                         prices.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatePanel, {
@@ -6354,24 +6388,24 @@ function RouteContent(props) {
                             detail: "Try another crop or market name."
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 286,
+                            lineNumber: 317,
                             columnNumber: 570
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 286,
+                    lineNumber: 317,
                     columnNumber: 477
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 286,
+            lineNumber: 317,
             columnNumber: 73
         }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 286,
+        lineNumber: 317,
         columnNumber: 64
     }, this);
     if (path === '/farmer/market') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6387,7 +6421,7 @@ function RouteContent(props) {
                         children: "CONNECT WITH BUYERS"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 119
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6399,7 +6433,7 @@ function RouteContent(props) {
                         children: "List your produce"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 169
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6411,7 +6445,7 @@ function RouteContent(props) {
                         children: "Share your upcoming harvest with verified regional buyers."
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 257
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -6437,18 +6471,18 @@ function RouteContent(props) {
                                                 children: c.name
                                             }, c.id, false, {
                                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                                lineNumber: 287,
+                                                lineNumber: 318,
                                                 columnNumber: 611
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 287,
+                                        lineNumber: 318,
                                         columnNumber: 533
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 287,
+                                lineNumber: 318,
                                 columnNumber: 476
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6468,13 +6502,13 @@ function RouteContent(props) {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 287,
+                                        lineNumber: 318,
                                         columnNumber: 734
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 287,
+                                lineNumber: 318,
                                 columnNumber: 666
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6494,13 +6528,13 @@ function RouteContent(props) {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 287,
+                                        lineNumber: 318,
                                         columnNumber: 919
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 287,
+                                lineNumber: 318,
                                 columnNumber: 843
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6510,26 +6544,26 @@ function RouteContent(props) {
                                         size: 15
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 287,
+                                        lineNumber: 318,
                                         columnNumber: 1053
                                     }, this),
                                     " Save produce listing"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 287,
+                                lineNumber: 318,
                                 columnNumber: 1021
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 380
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 287,
+                lineNumber: 318,
                 columnNumber: 117
             }, this)),
             panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6538,14 +6572,14 @@ function RouteContent(props) {
                         title: "Nearby mandi prices"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 1128
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PriceRows, {
                         compact: true
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 1173
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -6560,25 +6594,25 @@ function RouteContent(props) {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 287,
+                                lineNumber: 318,
                                 columnNumber: 1286
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 287,
+                        lineNumber: 318,
                         columnNumber: 1193
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 287,
+                lineNumber: 318,
                 columnNumber: 1126
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 287,
+        lineNumber: 318,
         columnNumber: 38
     }, this);
     if (path === '/farmer/orders' || path === '/buyer/orders' || path === '/company/orders') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6588,7 +6622,7 @@ function RouteContent(props) {
                 children: "ORDER ACTIVITY"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 288,
+                lineNumber: 319,
                 columnNumber: 96
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6600,12 +6634,12 @@ function RouteContent(props) {
                 children: "Track fulfilment milestones and recent transactions."
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 288,
+                lineNumber: 319,
                 columnNumber: 141
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(OrderRows, {}, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 288,
+                lineNumber: 319,
                 columnNumber: 267
             }, this),
             orders.map((o)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6625,13 +6659,13 @@ function RouteContent(props) {
                     ]
                 }, `action-${o.id}`, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 288,
+                    lineNumber: 319,
                     columnNumber: 294
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 288,
+        lineNumber: 319,
         columnNumber: 94
     }, this));
     if (path === '/farmer/experts') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6640,7 +6674,7 @@ function RouteContent(props) {
                 title: "Trusted field specialists"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 289,
+                lineNumber: 320,
                 columnNumber: 47
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6653,7 +6687,7 @@ function RouteContent(props) {
                 children: "Ask practical questions or request a focused consultation."
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 289,
+                lineNumber: 320,
                 columnNumber: 98
             }, this),
             experts.map((e)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6670,7 +6704,7 @@ function RouteContent(props) {
                             size: 42
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 289,
+                            lineNumber: 320,
                             columnNumber: 375
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6686,7 +6720,7 @@ function RouteContent(props) {
                                     children: e.name
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 320,
                                     columnNumber: 438
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6698,7 +6732,7 @@ function RouteContent(props) {
                                     children: e.specialty
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 320,
                                     columnNumber: 494
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6710,13 +6744,13 @@ function RouteContent(props) {
                                     children: e.next
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 320,
                                     columnNumber: 573
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 289,
+                            lineNumber: 320,
                             columnNumber: 416
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6729,19 +6763,19 @@ function RouteContent(props) {
                             children: "Request consult"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 289,
+                            lineNumber: 320,
                             columnNumber: 653
                         }, this)
                     ]
                 }, e.name, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 289,
+                    lineNumber: 320,
                     columnNumber: 251
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 289,
+        lineNumber: 320,
         columnNumber: 45
     }, this));
     if (path === '/farmer/schemes') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6780,7 +6814,7 @@ function RouteContent(props) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 290,
+                        lineNumber: 321,
                         columnNumber: 489
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -6792,7 +6826,7 @@ function RouteContent(props) {
                         children: x[0]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 290,
+                        lineNumber: 321,
                         columnNumber: 558
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6805,7 +6839,7 @@ function RouteContent(props) {
                         children: x[1]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 290,
+                        lineNumber: 321,
                         columnNumber: 640
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -6818,26 +6852,26 @@ function RouteContent(props) {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 290,
+                                lineNumber: 321,
                                 columnNumber: 820
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 290,
+                        lineNumber: 321,
                         columnNumber: 724
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 290,
+                lineNumber: 321,
                 columnNumber: 487
             }, this), {
                 boxShadow: 'none'
             }))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 290,
+        lineNumber: 321,
         columnNumber: 39
     }, this);
     if (path === '/farmer/yield-calculator') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6853,7 +6887,7 @@ function RouteContent(props) {
                         children: "SEASON PLANNER"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 126
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6864,7 +6898,7 @@ function RouteContent(props) {
                         children: "Estimate your harvest"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 171
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6885,33 +6919,33 @@ function RouteContent(props) {
                                         children: "Onion"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 291,
+                                        lineNumber: 322,
                                         columnNumber: 366
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                         children: "Tomato"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 291,
+                                        lineNumber: 322,
                                         columnNumber: 388
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                         children: "Grapes"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 291,
+                                        lineNumber: 322,
                                         columnNumber: 411
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 291,
+                                lineNumber: 322,
                                 columnNumber: 302
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 248
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6933,19 +6967,19 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 291,
+                                lineNumber: 322,
                                 columnNumber: 514
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 451
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 291,
+                lineNumber: 322,
                 columnNumber: 124
             }, this)),
             panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -6955,7 +6989,7 @@ function RouteContent(props) {
                         children: "PLANNING ESTIMATE"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 680
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6975,13 +7009,13 @@ function RouteContent(props) {
                                 children: "tonnes"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 291,
+                                lineNumber: 322,
                                 columnNumber: 827
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 728
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6997,7 +7031,7 @@ function RouteContent(props) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 889
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7010,19 +7044,19 @@ function RouteContent(props) {
                         children: "Planning estimate only. Actual yields depend on local conditions, crop care and weather."
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 291,
+                        lineNumber: 322,
                         columnNumber: 1001
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 291,
+                lineNumber: 322,
                 columnNumber: 678
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 291,
+        lineNumber: 322,
         columnNumber: 48
     }, this);
     if (path === '/buyer/marketplace') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7043,20 +7077,20 @@ function RouteContent(props) {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 193
                             }, this),
                             " Filters"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 292,
+                        lineNumber: 323,
                         columnNumber: 108
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 292,
+                lineNumber: 323,
                 columnNumber: 44
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7120,12 +7154,12 @@ function RouteContent(props) {
                                     size: 31
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 292,
+                                    lineNumber: 323,
                                     columnNumber: 1065
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 871
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7142,7 +7176,7 @@ function RouteContent(props) {
                                         children: p[0]
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 292,
+                                        lineNumber: 323,
                                         columnNumber: 1163
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7150,13 +7184,13 @@ function RouteContent(props) {
                                         children: "Fresh"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 292,
+                                        lineNumber: 323,
                                         columnNumber: 1208
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 1089
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7168,7 +7202,7 @@ function RouteContent(props) {
                                 children: p[1]
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 1249
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7180,7 +7214,7 @@ function RouteContent(props) {
                                 children: p[2]
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 1321
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7195,7 +7229,7 @@ function RouteContent(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 1388
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7210,26 +7244,26 @@ function RouteContent(props) {
                                 children: "Contact grower"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 292,
+                                lineNumber: 323,
                                 columnNumber: 1478
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 292,
+                        lineNumber: 323,
                         columnNumber: 869
                     }, this), {
                         boxShadow: 'none'
                     }))
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 292,
+                lineNumber: 323,
                 columnNumber: 238
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 292,
+        lineNumber: 323,
         columnNumber: 42
     }, this);
     if (path === '/buyer/requests') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7250,7 +7284,7 @@ function RouteContent(props) {
                                 children: "SOURCING PIPELINE"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 293,
+                                lineNumber: 324,
                                 columnNumber: 156
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7262,13 +7296,13 @@ function RouteContent(props) {
                                 children: "Requirements shared with your grower network."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 293,
+                                lineNumber: 324,
                                 columnNumber: 204
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 293,
+                        lineNumber: 324,
                         columnNumber: 151
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7279,20 +7313,20 @@ function RouteContent(props) {
                                 size: 15
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 293,
+                                lineNumber: 324,
                                 columnNumber: 406
                             }, this),
                             " Create requirement"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 293,
+                        lineNumber: 324,
                         columnNumber: 321
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 293,
+                lineNumber: 324,
                 columnNumber: 47
             }, this),
             [
@@ -7335,7 +7369,7 @@ function RouteContent(props) {
                                     children: r[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 293,
+                                    lineNumber: 324,
                                     columnNumber: 856
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7347,13 +7381,13 @@ function RouteContent(props) {
                                     children: r[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 293,
+                                    lineNumber: 324,
                                     columnNumber: 901
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 293,
+                            lineNumber: 324,
                             columnNumber: 834
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7364,7 +7398,7 @@ function RouteContent(props) {
                             children: r[2]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 293,
+                            lineNumber: 324,
                             columnNumber: 979
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7372,19 +7406,19 @@ function RouteContent(props) {
                             children: r[3]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 293,
+                            lineNumber: 324,
                             columnNumber: 1041
                         }, this)
                     ]
                 }, r[0], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 293,
+                    lineNumber: 324,
                     columnNumber: 712
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 293,
+        lineNumber: 324,
         columnNumber: 45
     }, this));
     if (path === '/buyer/suppliers') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7393,7 +7427,7 @@ function RouteContent(props) {
                 title: "Your grower network"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 294,
+                lineNumber: 325,
                 columnNumber: 48
             }, this),
             [
@@ -7434,7 +7468,7 @@ function RouteContent(props) {
                             text: x[3]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 294,
+                            lineNumber: 325,
                             columnNumber: 530
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7450,7 +7484,7 @@ function RouteContent(props) {
                                     children: x[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 294,
+                                    lineNumber: 325,
                                     columnNumber: 577
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7462,13 +7496,13 @@ function RouteContent(props) {
                                     children: x[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 294,
+                                    lineNumber: 325,
                                     columnNumber: 631
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 294,
+                            lineNumber: 325,
                             columnNumber: 555
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7479,7 +7513,7 @@ function RouteContent(props) {
                             children: x[2]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 294,
+                            lineNumber: 325,
                             columnNumber: 709
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -7491,19 +7525,19 @@ function RouteContent(props) {
                             children: "Profile"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 294,
+                            lineNumber: 325,
                             columnNumber: 771
                         }, this)
                     ]
                 }, x[0], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 294,
+                    lineNumber: 325,
                     columnNumber: 408
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 294,
+        lineNumber: 325,
         columnNumber: 46
     }, this));
     if (path === '/buyer/analytics') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7519,7 +7553,7 @@ function RouteContent(props) {
                         children: "PROCUREMENT SPEND"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 118
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7531,7 +7565,7 @@ function RouteContent(props) {
                         children: "₹4.26L"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 166
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7542,7 +7576,7 @@ function RouteContent(props) {
                         children: "June to date · 18 orders"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 237
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7569,12 +7603,12 @@ function RouteContent(props) {
                                 }
                             }, i, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 425
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 315
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7590,54 +7624,54 @@ function RouteContent(props) {
                                 children: "Jan"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 663
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Feb"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 679
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Mar"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 695
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Apr"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 711
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "May"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 727
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Jun"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 295,
+                                lineNumber: 326,
                                 columnNumber: 743
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 558
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 295,
+                lineNumber: 326,
                 columnNumber: 116
             }, this)),
             panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7646,7 +7680,7 @@ function RouteContent(props) {
                         title: "Spend by produce"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 295,
+                        lineNumber: 326,
                         columnNumber: 779
                     }, this),
                     [
@@ -7686,20 +7720,20 @@ function RouteContent(props) {
                                             children: x[0]
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 295,
+                                            lineNumber: 326,
                                             columnNumber: 1036
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                             children: x[1]
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                            lineNumber: 295,
+                                            lineNumber: 326,
                                             columnNumber: 1055
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 295,
+                                    lineNumber: 326,
                                     columnNumber: 963
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7718,30 +7752,30 @@ function RouteContent(props) {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 295,
+                                        lineNumber: 326,
                                         columnNumber: 1168
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 295,
+                                    lineNumber: 326,
                                     columnNumber: 1084
                                 }, this)
                             ]
                         }, x[0], true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 295,
+                            lineNumber: 326,
                             columnNumber: 921
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 295,
+                lineNumber: 326,
                 columnNumber: 777
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 295,
+        lineNumber: 326,
         columnNumber: 40
     }, this);
     if (path === '/company/products') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7750,7 +7784,7 @@ function RouteContent(props) {
                 title: "Product catalogue"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 296,
+                lineNumber: 327,
                 columnNumber: 49
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7767,19 +7801,19 @@ function RouteContent(props) {
                             size: 15
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 296,
+                            lineNumber: 327,
                             columnNumber: 249
                         }, this),
                         " Add product"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 296,
+                    lineNumber: 327,
                     columnNumber: 159
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 296,
+                lineNumber: 327,
                 columnNumber: 92
             }, this),
             [
@@ -7822,12 +7856,12 @@ function RouteContent(props) {
                                 size: 17
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 296,
+                                lineNumber: 327,
                                 columnNumber: 774
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 296,
+                            lineNumber: 327,
                             columnNumber: 637
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7843,7 +7877,7 @@ function RouteContent(props) {
                                     children: x[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 296,
+                                    lineNumber: 327,
                                     columnNumber: 822
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7855,13 +7889,13 @@ function RouteContent(props) {
                                     children: x[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 296,
+                                    lineNumber: 327,
                                     columnNumber: 876
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 296,
+                            lineNumber: 327,
                             columnNumber: 800
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7869,19 +7903,19 @@ function RouteContent(props) {
                             children: i === 2 ? 'Needs stock' : 'Active'
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 296,
+                            lineNumber: 327,
                             columnNumber: 954
                         }, this)
                     ]
                 }, x[0], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 296,
+                    lineNumber: 327,
                     columnNumber: 515
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 296,
+        lineNumber: 327,
         columnNumber: 47
     }, this));
     if (path === '/company/farmers') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -7890,7 +7924,7 @@ function RouteContent(props) {
                 title: "Farmer network"
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 297,
+                lineNumber: 328,
                 columnNumber: 48
             }, this),
             [
@@ -7931,7 +7965,7 @@ function RouteContent(props) {
                             text: x[3]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 297,
+                            lineNumber: 328,
                             columnNumber: 497
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7947,7 +7981,7 @@ function RouteContent(props) {
                                     children: x[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 328,
                                     columnNumber: 544
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7959,13 +7993,13 @@ function RouteContent(props) {
                                     children: x[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 328,
                                     columnNumber: 598
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 297,
+                            lineNumber: 328,
                             columnNumber: 522
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -7976,19 +8010,19 @@ function RouteContent(props) {
                             children: x[2]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 297,
+                            lineNumber: 328,
                             columnNumber: 676
                         }, this)
                     ]
                 }, x[0], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 297,
+                    lineNumber: 328,
                     columnNumber: 375
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 297,
+        lineNumber: 328,
         columnNumber: 46
     }, this));
     if (path === '/company/campaigns') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -8004,7 +8038,7 @@ function RouteContent(props) {
                         title: "Field programmes"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 298,
+                        lineNumber: 329,
                         columnNumber: 131
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8015,20 +8049,20 @@ function RouteContent(props) {
                                 size: 15
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 298,
+                                lineNumber: 329,
                                 columnNumber: 252
                             }, this),
                             " New campaign"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 298,
+                        lineNumber: 329,
                         columnNumber: 173
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 298,
+                lineNumber: 329,
                 columnNumber: 50
             }, this),
             [
@@ -8068,7 +8102,7 @@ function RouteContent(props) {
                                     children: x[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 298,
+                                    lineNumber: 329,
                                     columnNumber: 666
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8076,13 +8110,13 @@ function RouteContent(props) {
                                     children: x[2]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 298,
+                                    lineNumber: 329,
                                     columnNumber: 685
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 298,
+                            lineNumber: 329,
                             columnNumber: 578
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8094,7 +8128,7 @@ function RouteContent(props) {
                             children: x[1]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 298,
+                            lineNumber: 329,
                             columnNumber: 727
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8113,24 +8147,24 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 298,
+                                lineNumber: 329,
                                 columnNumber: 884
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 298,
+                            lineNumber: 329,
                             columnNumber: 799
                         }, this)
                     ]
                 }, x[0], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 298,
+                    lineNumber: 329,
                     columnNumber: 498
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 298,
+        lineNumber: 329,
         columnNumber: 48
     }, this));
     if (path === '/company/analytics') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8146,7 +8180,7 @@ function RouteContent(props) {
                 icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"]
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 299,
+                lineNumber: 330,
                 columnNumber: 127
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -8156,7 +8190,7 @@ function RouteContent(props) {
                 icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"]
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 299,
+                lineNumber: 330,
                 columnNumber: 233
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -8166,7 +8200,7 @@ function RouteContent(props) {
                 icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$545$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"]
             }, void 0, false, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 299,
+                lineNumber: 330,
                 columnNumber: 323
             }, this),
             panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -8176,7 +8210,7 @@ function RouteContent(props) {
                         children: "NETWORK GROWTH"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 299,
+                        lineNumber: 330,
                         columnNumber: 426
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8205,12 +8239,12 @@ function RouteContent(props) {
                                 }
                             }, i, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 299,
+                                lineNumber: 330,
                                 columnNumber: 587
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 299,
+                        lineNumber: 330,
                         columnNumber: 471
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8222,13 +8256,13 @@ function RouteContent(props) {
                         children: "Farmer activations · Jan–Aug"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 299,
+                        lineNumber: 330,
                         columnNumber: 720
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 299,
+                lineNumber: 330,
                 columnNumber: 424
             }, this), {
                 gridColumn: 'span 2'
@@ -8239,7 +8273,7 @@ function RouteContent(props) {
                         title: "Top districts"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 299,
+                        lineNumber: 330,
                         columnNumber: 850
                     }, this),
                     [
@@ -8268,32 +8302,32 @@ function RouteContent(props) {
                                     children: x[0]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 299,
+                                    lineNumber: 330,
                                     columnNumber: 1110
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                     children: x[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 299,
+                                    lineNumber: 330,
                                     columnNumber: 1129
                                 }, this)
                             ]
                         }, x[0], true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 299,
+                            lineNumber: 330,
                             columnNumber: 972
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 299,
+                lineNumber: 330,
                 columnNumber: 848
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 299,
+        lineNumber: 330,
         columnNumber: 42
     }, this);
     if (path === '/expert/questions') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -8313,7 +8347,7 @@ function RouteContent(props) {
                                 children: "COMMUNITY INBOX"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 300,
+                                lineNumber: 331,
                                 columnNumber: 151
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8325,13 +8359,13 @@ function RouteContent(props) {
                                 children: "Prioritised by urgency and time waiting."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 300,
+                                lineNumber: 331,
                                 columnNumber: 197
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 300,
+                        lineNumber: 331,
                         columnNumber: 146
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8342,20 +8376,20 @@ function RouteContent(props) {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 300,
+                                lineNumber: 331,
                                 columnNumber: 394
                             }, this),
                             " Open · 8"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 300,
+                        lineNumber: 331,
                         columnNumber: 309
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 300,
+                lineNumber: 331,
                 columnNumber: 49
             }, this),
             [
@@ -8397,7 +8431,7 @@ function RouteContent(props) {
                             children: x[0]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 300,
+                            lineNumber: 331,
                             columnNumber: 883
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8413,7 +8447,7 @@ function RouteContent(props) {
                                     children: x[1]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 331,
                                     columnNumber: 1065
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8425,13 +8459,13 @@ function RouteContent(props) {
                                     children: x[2]
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 331,
                                     columnNumber: 1119
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 300,
+                            lineNumber: 331,
                             columnNumber: 1043
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8444,19 +8478,19 @@ function RouteContent(props) {
                             children: "Write answer"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 300,
+                            lineNumber: 331,
                             columnNumber: 1197
                         }, this)
                     ]
                 }, x[1], true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 300,
+                    lineNumber: 331,
                     columnNumber: 761
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 300,
+        lineNumber: 331,
         columnNumber: 47
     }, this));
     if (path === '/expert/consultations') return panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -8473,7 +8507,7 @@ function RouteContent(props) {
                         title: "Consultation schedule"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 301,
+                        lineNumber: 332,
                         columnNumber: 150
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8485,19 +8519,19 @@ function RouteContent(props) {
                                 size: 14
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 301,
+                                lineNumber: 332,
                                 columnNumber: 288
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 301,
+                        lineNumber: 332,
                         columnNumber: 197
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 301,
+                lineNumber: 332,
                 columnNumber: 53
             }, this),
             consultations.map((c)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8522,7 +8556,7 @@ function RouteContent(props) {
                             children: c.date.split(',')[0]
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 301,
+                            lineNumber: 332,
                             columnNumber: 471
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8538,7 +8572,7 @@ function RouteContent(props) {
                                     children: c.subject
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 332,
                                     columnNumber: 674
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8554,13 +8588,13 @@ function RouteContent(props) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 332,
                                     columnNumber: 733
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 301,
+                            lineNumber: 332,
                             columnNumber: 652
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -8568,7 +8602,7 @@ function RouteContent(props) {
                             children: c.status
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 301,
+                            lineNumber: 332,
                             columnNumber: 826
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8580,19 +8614,19 @@ function RouteContent(props) {
                             children: "Details"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 301,
+                            lineNumber: 332,
                             columnNumber: 866
                         }, this)
                     ]
                 }, c.id, true, {
                     fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                    lineNumber: 301,
+                    lineNumber: 332,
                     columnNumber: 349
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 301,
+        lineNumber: 332,
         columnNumber: 51
     }, this));
     if (path === '/expert/knowledge') return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8632,7 +8666,7 @@ function RouteContent(props) {
                         children: x[0]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 302,
+                        lineNumber: 333,
                         columnNumber: 617
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8650,12 +8684,12 @@ function RouteContent(props) {
                             size: 26
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 302,
+                            lineNumber: 333,
                             columnNumber: 852
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 302,
+                        lineNumber: 333,
                         columnNumber: 654
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -8667,7 +8701,7 @@ function RouteContent(props) {
                         children: x[1]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 302,
+                        lineNumber: 333,
                         columnNumber: 879
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -8680,7 +8714,7 @@ function RouteContent(props) {
                         children: x[2]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 302,
+                        lineNumber: 333,
                         columnNumber: 961
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8701,7 +8735,7 @@ function RouteContent(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 302,
+                                lineNumber: 333,
                                 columnNumber: 1126
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8713,32 +8747,32 @@ function RouteContent(props) {
                                         size: 13
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 333,
                                         columnNumber: 1280
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 302,
+                                lineNumber: 333,
                                 columnNumber: 1193
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 302,
+                        lineNumber: 333,
                         columnNumber: 1045
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 302,
+                lineNumber: 333,
                 columnNumber: 615
             }, this), {
                 boxShadow: 'none'
             }))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 302,
+        lineNumber: 333,
         columnNumber: 41
     }, this);
     if (path.endsWith('/profile')) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8762,7 +8796,7 @@ function RouteContent(props) {
                                 size: 55
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 192
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8776,7 +8810,7 @@ function RouteContent(props) {
                                         children: role === 'farmer' ? 'Arjun Patel' : role === 'buyer' ? 'FreshRoute Foods' : role === 'company' ? 'Sahyadri Agri' : 'Dr. Meera Kulkarni'
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 303,
+                                        lineNumber: 334,
                                         columnNumber: 295
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8791,19 +8825,19 @@ function RouteContent(props) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 303,
+                                        lineNumber: 334,
                                         columnNumber: 487
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 290
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 119
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -8822,13 +8856,13 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 667
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 605
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -8848,13 +8882,13 @@ function RouteContent(props) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 935
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 872
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8863,13 +8897,13 @@ function RouteContent(props) {
                         children: "Save profile"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1047
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 303,
+                lineNumber: 334,
                 columnNumber: 117
             }, this)),
             panel(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -8878,7 +8912,7 @@ function RouteContent(props) {
                         title: "Workspace settings"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1180
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8889,14 +8923,14 @@ function RouteContent(props) {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 1309
                             }, this),
                             " Notification preferences"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1224
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8907,14 +8941,14 @@ function RouteContent(props) {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 1437
                             }, this),
                             " Privacy & security"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1360
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -8925,14 +8959,14 @@ function RouteContent(props) {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
+                                lineNumber: 334,
                                 columnNumber: 1561
                             }, this),
                             " Help center"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1489
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8943,12 +8977,12 @@ function RouteContent(props) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1605
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>{
-                            localStorage.removeItem('kn-demo-role');
+                            removeDemoStorage('kn-demo-role');
                             navigate('/onboarding');
                         },
                         className: "nav-link",
@@ -8962,26 +8996,26 @@ function RouteContent(props) {
                                 size: 16
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 303,
-                                columnNumber: 1838
+                                lineNumber: 334,
+                                columnNumber: 1832
                             }, this),
                             " Change workspace role"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 303,
+                        lineNumber: 334,
                         columnNumber: 1671
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 303,
+                lineNumber: 334,
                 columnNumber: 1178
             }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 303,
+        lineNumber: 334,
         columnNumber: 40
     }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatePanel, {
@@ -8993,12 +9027,12 @@ function RouteContent(props) {
             children: "Refresh workspace"
         }, void 0, false, {
             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-            lineNumber: 304,
+            lineNumber: 335,
             columnNumber: 155
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 304,
+        lineNumber: 335,
         columnNumber: 10
     }, this);
 }
@@ -9028,12 +9062,12 @@ function PriceRowsWithData({ data }) {
                             size: 16
                         }, void 0, false, {
                             fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                            lineNumber: 308,
+                            lineNumber: 339,
                             columnNumber: 295
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 308,
+                        lineNumber: 339,
                         columnNumber: 156
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9049,7 +9083,7 @@ function PriceRowsWithData({ data }) {
                                 children: item.crop
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 308,
+                                lineNumber: 339,
                                 columnNumber: 341
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9061,13 +9095,13 @@ function PriceRowsWithData({ data }) {
                                 children: item.market
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 308,
+                                lineNumber: 339,
                                 columnNumber: 400
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 308,
+                        lineNumber: 339,
                         columnNumber: 319
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9093,13 +9127,13 @@ function PriceRowsWithData({ data }) {
                                         children: "/ qtl"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 339,
                                         columnNumber: 598
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 308,
+                                lineNumber: 339,
                                 columnNumber: 518
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$8_$40$types$2b$node$40$25$2e$9$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9114,24 +9148,24 @@ function PriceRowsWithData({ data }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                                lineNumber: 308,
+                                lineNumber: 339,
                                 columnNumber: 679
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                        lineNumber: 308,
+                        lineNumber: 339,
                         columnNumber: 485
                     }, this)
                 ]
             }, item.id, true, {
                 fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-                lineNumber: 308,
+                lineNumber: 339,
                 columnNumber: 31
             }, this))
     }, void 0, false, {
         fileName: "[project]/artifacts/kisan-network/src/components/workspace.tsx",
-        lineNumber: 308,
+        lineNumber: 339,
         columnNumber: 10
     }, this);
 }
