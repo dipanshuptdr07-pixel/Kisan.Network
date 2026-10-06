@@ -130,8 +130,6 @@ const hindi: Record<string, string> = {
   'Today at a glance': 'आज की झलक',
   'Good conditions for field work': 'खेत के काम के लिए मौसम अच्छा है',
   'Your next move': 'अब आगे क्या करें',
-  'My crops': 'मेरी फ़सलें',
-  'Mandi prices': 'मंडी भाव',
   'Your field network': 'आपके खेती के साथी',
   'Meet experts': 'विशेषज्ञों से मिलें',
   'Get trusted, practical advice from agriculture specialists near you.': 'अपने पास के कृषि विशेषज्ञों से भरोसेमंद और काम की सलाह पाएँ।',
@@ -185,7 +183,6 @@ const hindi: Record<string, string> = {
   'Farmer network report is ready in this demo.': 'डेमो में किसान नेटवर्क रिपोर्ट तैयार है।',
   'Open questions': 'खुले सवाल',
   '3 need a response today': '3 जवाब आज देने हैं',
-  'Consultations': 'परामर्श',
   'Next starts at 10:30': 'अगला परामर्श 10:30 बजे',
   'Farmers helped': 'मदद पाए किसान',
   '18 this month': 'इस महीने 18',
@@ -309,7 +306,6 @@ const hindi: Record<string, string> = {
   'Equipment · 920 units': 'उपकरण · 920 इकाइयाँ',
   'Crop care · 2,200 units': 'फ़सल की देखभाल · 2,200 इकाइयाँ',
   'Needs stock': 'स्टॉक भरना है',
-  'Farmer network': 'किसान नेटवर्क',
   'Active this week': 'इस सप्ताह सक्रिय',
   'New member': 'नए सदस्य',
   'Campaign member': 'अभियान में शामिल',
@@ -323,7 +319,6 @@ const hindi: Record<string, string> = {
   'Quarterly order value': 'तिमाही ऑर्डर का मूल्य',
   '14.2% quarter-on-quarter': 'पिछली तिमाही से 14.2% अधिक',
   'Farmer activation': 'सक्रिय किसान',
-  'Across 3 districts': '3 ज़िलों में',
   'Campaign conversion': 'अभियान से जुड़ाव',
   '5.6% above target': 'लक्ष्य से 5.6% अधिक',
   'NETWORK GROWTH': 'नेटवर्क की बढ़त',
@@ -353,7 +348,6 @@ const hindi: Record<string, string> = {
   'Upcoming': 'आने वाला',
   'Answered': 'जवाब दिया',
   'Details': 'विवरण',
-  'Consultation details opened for': 'के परामर्श का विवरण खुल गया',
   'FIELD GUIDE': 'खेत की जानकारी',
   'SOIL HEALTH': 'मिट्टी का स्वास्थ्य',
   'POST-HARVEST': 'कटाई के बाद',
@@ -380,7 +374,6 @@ const hindi: Record<string, string> = {
   'This workspace is ready': 'कार्यक्षेत्र तैयार है',
   'Your role-specific workspace is set up. Choose an item from navigation to continue.': 'आपका कार्यक्षेत्र तैयार है। आगे बढ़ने के लिए मेन्यू से कोई विकल्प चुनें।',
   'Workspace refreshed.': 'कार्यक्षेत्र रीफ़्रेश हुआ।',
-  'Demo administration': 'डेमो प्रशासन',
   'Admin sections': 'एडमिन के विभाग',
   'DATA SOURCE ERROR': 'डेटा स्रोत में समस्या',
   'Unable to load the administration data.': 'एडमिन का डेटा लोड नहीं हो सका।',
@@ -391,7 +384,7 @@ const hindi: Record<string, string> = {
   'Indicative local demo data': 'स्थानीय डेमो के सांकेतिक आँकड़े',
   'Demo health': 'डेमो की स्थिति',
   'Ready': 'तैयार',
-  'No external services connected': 'कोई बाहरी सेवा जुड़ी नहीं है',
+'No external services connected': 'कोई बाहरी सेवा जुड़ी नहीं है',
   'ROLE DISTRIBUTION': 'भूमिकाओं का बँटवारा',
   'Public workspaces': 'सार्वजनिक कार्यक्षेत्र',
   'DEMO MODE': 'डेमो मोड',
@@ -416,8 +409,6 @@ const hindi: Record<string, string> = {
   'A snapshot of activity across the four public workspaces.': 'चारों सार्वजनिक कार्यक्षेत्रों की गतिविधि की झलक।',
   'ADMIN SETTINGS': 'एडमिन सेटिंग',
   'Demo environment details and future integration notes.': 'डेमो वातावरण का विवरण और आगे के एकीकरण की जानकारी।',
-  'Active': 'सक्रिय',
-  'Available': 'उपलब्ध',
   'User directory': 'उपयोगकर्ता सूची',
   '4 demo accounts · 4 public roles': '4 डेमो खाते · 4 सार्वजनिक भूमिकाएँ',
   'Marketplace snapshot': 'कृषि बाज़ार की झलक',
@@ -452,7 +443,6 @@ const hindi: Record<string, string> = {
   'Your workspace will show updates when there is something to see.': 'नई जानकारी आने पर वह आपके कार्यक्षेत्र में दिखाई देगी।',
   'View all': 'सभी देखें',
   'New season': 'नया मौसम',
-  'Recently planted': 'अभी बोई गई',
   'Fruit development': 'फल बन रहे हैं',
   'Ready in 12 days': '12 दिनों में तैयार',
   'Ready for pickup': 'उठान के लिए तैयार',
@@ -504,11 +494,17 @@ const hindi: Record<string, string> = {
 };
 
 const englishByHindi = new Map<string, string>();
+
 for (const [english, translated] of Object.entries(hindi)) {
-  if (!englishByHindi.has(translated)) englishByHindi.set(translated, english);
+  if (!englishByHindi.has(translated)) {
+    englishByHindi.set(translated, english);
+  }
 }
 
-function translateDynamic(text: string, language: Language): string | undefined {
+function translateDynamic(
+  text: string,
+  language: Language
+): string | undefined {
   if (language === 'hi') {
     let match = text.match(/^Try again in (\d+)s$/);
     if (match) return `${match[1]} सेकंड बाद फिर कोशिश करें`;
@@ -522,7 +518,7 @@ function translateDynamic(text: string, language: Language): string | undefined 
     match = text.match(/^Enquiry sent for (.+)\.$/);
     if (match) return `${match[1]} के लिए पूछताछ भेजी गई।`;
 
-    match = text.match(/^Order (.+) details opened\.$/);
+    match = text.match(/^Order (KN-\d+) details opened\.$/);
     if (match) return `ऑर्डर ${match[1]} का विवरण खुल गया।`;
 
     match = text.match(/^View (KN-\d+)$/);
@@ -544,7 +540,9 @@ function translateDynamic(text: string, language: Language): string | undefined 
     if (match) return `${match[1]} एकड़`;
 
     match = text.match(/^([\d.]+) acres · (.+)$/);
-    if (match) return `${match[1]} एकड़ · ${hindi[match[2]] || match[2]}`;
+    if (match) {
+      return `${match[1]} एकड़ · ${hindi[match[2]] || match[2]}`;
+    }
 
     match = text.match(/^(\d+) min$/);
     if (match) return `${match[1]} मिनट`;
@@ -565,13 +563,19 @@ function translateDynamic(text: string, language: Language): string | undefined 
     if (match) return `${match[1]} किसान`;
 
     match = text.match(/^(\d+) demo accounts · (\d+) public roles$/);
-    if (match) return `${match[1]} डेमो खाते · ${match[2]} सार्वजनिक भूमिकाएँ`;
+    if (match) {
+      return `${match[1]} डेमो खाते · ${match[2]} सार्वजनिक भूमिकाएँ`;
+    }
 
     match = text.match(/^(\d+) indicative prices · (\d+) sample orders$/);
-    if (match) return `${match[1]} सांकेतिक भाव · ${match[2]} नमूना ऑर्डर`;
+    if (match) {
+      return `${match[1]} सांकेतिक भाव · ${match[2]} नमूना ऑर्डर`;
+    }
 
     match = text.match(/^(.+) · ₹([\d,]+) \/ (quintal|qtl)$/);
-    if (match) return `${hindi[match[1]] || match[1]} · ₹${match[2]} / क्विंटल`;
+    if (match) {
+      return `${hindi[match[1]] || match[1]} · ₹${match[2]} / क्विंटल`;
+    }
   } else {
     let match = text.match(/^सुप्रभात, (.+?) जी।$/);
     if (match) return `Good morning, ${match[1]}.`;
@@ -604,38 +608,99 @@ function translateDynamic(text: string, language: Language): string | undefined 
     if (match) return `Order ${match[1]} details opened.`;
   }
 
-  const dateMatch = text.match(/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/);
+  const dateMatch = text.match(
+    /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/
+  );
+
   if (dateMatch) {
     if (language === 'hi') {
-      const weekdays: Record<string, string> = { Monday: 'सोमवार', Tuesday: 'मंगलवार', Wednesday: 'बुधवार', Thursday: 'गुरुवार', Friday: 'शुक्रवार', Saturday: 'शनिवार', Sunday: 'रविवार' };
-      const months: Record<string, string> = { January: 'जनवरी', February: 'फ़रवरी', March: 'मार्च', April: 'अप्रैल', May: 'मई', June: 'जून', July: 'जुलाई', August: 'अगस्त', September: 'सितंबर', October: 'अक्टूबर', November: 'नवंबर', December: 'दिसंबर' };
+      const weekdays: Record<string, string> = {
+        Monday: 'सोमवार',
+        Tuesday: 'मंगलवार',
+        Wednesday: 'बुधवार',
+        Thursday: 'गुरुवार',
+        Friday: 'शुक्रवार',
+        Saturday: 'शनिवार',
+        Sunday: 'रविवार',
+      };
+
+      const months: Record<string, string> = {
+        January: 'जनवरी',
+        February: 'फ़रवरी',
+        March: 'मार्च',
+        April: 'अप्रैल',
+        May: 'मई',
+        June: 'जून',
+        July: 'जुलाई',
+        August: 'अगस्त',
+        September: 'सितंबर',
+        October: 'अक्टूबर',
+        November: 'नवंबर',
+        December: 'दिसंबर',
+      };
+
       return `${weekdays[dateMatch[1]]}, ${dateMatch[2]} ${months[dateMatch[3]]}`;
     }
-    const hindiWeekdays: Record<string, string> = { सोमवार: 'Monday', मंगलवार: 'Tuesday', बुधवार: 'Wednesday', गुरुवार: 'Thursday', शुक्रवार: 'Friday', शनिवार: 'Saturday', रविवार: 'Sunday' };
-    const hindiMonths: Record<string, string> = { जनवरी: 'January', फ़रवरी: 'February', मार्च: 'March', अप्रैल: 'April', मई: 'May', जून: 'June', जुलाई: 'July', अगस्त: 'August', सितंबर: 'September', अक्टूबर: 'October', नवंबर: 'November', दिसंबर: 'December' };
-    const reverseDate = text.match(/^(सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार), (\d{1,2}) (जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्टूबर|नवंबर|दिसंबर)$/);
-    if (reverseDate) return `${hindiWeekdays[reverseDate[1]]}, ${reverseDate[2]} ${hindiMonths[reverseDate[3]]}`;
+
+    const hindiWeekdays: Record<string, string> = {
+      सोमवार: 'Monday',
+      मंगलवार: 'Tuesday',
+      बुधवार: 'Wednesday',
+      गुरुवार: 'Thursday',
+      शुक्रवार: 'Friday',
+      शनिवार: 'Saturday',
+      रविवार: 'Sunday',
+    };
+
+    const hindiMonths: Record<string, string> = {
+      जनवरी: 'January',
+      फ़रवरी: 'February',
+      मार्च: 'March',
+      अप्रैल: 'April',
+      मई: 'May',
+      जून: 'June',
+      जुलाई: 'July',
+      अगस्त: 'August',
+      सितंबर: 'September',
+      अक्टूबर: 'October',
+      नवंबर: 'November',
+      दिसंबर: 'December',
+    };
+
+    const reverseDate = text.match(
+      /^(सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार), (\d{1,2}) (जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्टूबर|नवंबर|दिसंबर)$/
+    );
+
+    if (reverseDate) {
+      return `${hindiWeekdays[reverseDate[1]]}, ${reverseDate[2]} ${hindiMonths[reverseDate[3]]}`;
+    }
   }
 
   return undefined;
 }
 
-export function translateText(source: string, language: Language): string {
+export function translateText(
+  source: string,
+  language: Language
+): string {
   const leading = source.match(/^\s*/)?.[0] || '';
   const trailing = source.match(/\s*$/)?.[0] || '';
   const text = source.trim();
+
   if (!text) return source;
 
   let translated: string | undefined;
+
   if (language === 'hi') {
     translated = hindi[text] ?? translateDynamic(text, language);
   } else {
-    translated = englishByHindi.get(text) ?? translateDynamic(text, language);
+    translated =
+      englishByHindi.get(text) ?? translateDynamic(text, language);
   }
 
   if (!translated) {
-    if (language === 'hi') return source;
     return source;
   }
+
   return `${leading}${translated}${trailing}`;
 }
