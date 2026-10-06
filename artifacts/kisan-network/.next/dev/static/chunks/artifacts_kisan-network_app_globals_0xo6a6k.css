@@ -3603,6 +3603,40 @@ a {
   place-items: center;
   padding: 32px 24px;
   display: grid;
+  position: relative;
+}
+
+.language-switch {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: 11px;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  display: flex;
+}
+
+.language-switch--auth {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.language-switch--floating {
+  z-index: 60;
+  position: fixed;
+  top: 14px;
+  right: 14px;
+}
+
+.language-switch--toolbar {
+  margin-left: 7px;
+}
+
+.language-switch--onboarding {
+  margin-left: 10px;
 }
 
 .auth-box {
@@ -3742,6 +3776,15 @@ a {
 
   .auth-panel {
     padding: 28px 22px;
+  }
+
+  .language-switch--toolbar {
+    margin-left: 3px;
+  }
+
+  .language-switch--toolbar button, .language-switch--onboarding button, .language-switch--auth button, .language-switch--floating button {
+    padding: 6px 7px !important;
+    font-size: 10px !important;
   }
 
   .hide-mobile {

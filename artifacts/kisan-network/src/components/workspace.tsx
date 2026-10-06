@@ -14,6 +14,7 @@ import {
 import { useKisanData } from '../hooks/use-kisan-data';
 import { demoSnapshot } from '../data/repository';
 import { isAdminSection, isRole, type AdminSection, type Crop, type MarketPrice, type Role } from '../data/types';
+import { LanguageLayer } from './language-layer';
 
 const { consultations, crops: seedCrops, demoFarmer, experts, marketPrices, notifications, orders, quickActions } = demoSnapshot;
 const roleNames: Record<Role, string> = {
@@ -151,7 +152,7 @@ function OrderRows({ list=orders }: { list?: typeof orders }) {
   return <div>{list.map(order=><div key={order.id} style={{display:'flex',alignItems:'center',gap:12,padding:'13px 0',borderBottom:'1px solid var(--line)'}}><div style={{width:38,height:38,borderRadius:12,background:'var(--surface-soft)',color:'var(--green)',display:'grid',placeItems:'center'}}><Package size={17}/></div><div style={{flex:1,minWidth:0}}><div style={{fontSize:12,fontWeight:700}}>{order.crop} <span style={{color:'var(--muted)',fontWeight:500}}>· {order.id}</span></div><div style={{fontSize:10,color:'var(--muted)',marginTop:4}}>{order.buyer} · {order.quantity}</div></div><div style={{textAlign:'right'}}><div style={{fontSize:12,fontWeight:700}}>{order.amount}</div><div style={{fontSize:10,color:'var(--green)',marginTop:3}}>{order.status}</div></div></div>)}</div>;
 }
 
-export function Workspace() {
+function WorkspaceContent() {
   const rawPathname = usePathname() || '/';
   const pathname = rawPathname === '/' ? '/' : rawPathname.replace(/\/+$/, '');
   const router = useRouter();
@@ -337,4 +338,8 @@ function RouteContent(props: {
 
 function PriceRowsWithData({data}:{data:typeof marketPrices}) {
   return <div>{data.map(item=><div key={item.id} style={{display:'flex',alignItems:'center',gap:11,padding:'12px 0',borderBottom:'1px solid var(--line)'}}><div style={{width:34,height:34,background:'var(--surface-soft)',borderRadius:11,display:'grid',placeItems:'center',color:'var(--green)'}}><Wheat size={16}/></div><div style={{flex:1}}><div style={{fontSize:12,fontWeight:700}}>{item.crop}</div><div style={{fontSize:10,color:'var(--muted)',marginTop:3}}>{item.market}</div></div><div style={{textAlign:'right'}}><div style={{fontSize:12,fontWeight:800}}>₹{item.price.toLocaleString('en-IN')} <span style={{fontSize:9,fontWeight:500,color:'var(--muted)'}}>/ qtl</span></div><div style={{fontSize:10,color:item.change>0?'var(--green)':'var(--amber)'}}>{item.change>0?'+':''}{item.change}% this week</div></div></div>)}</div>;
+}
+
+export function Workspace() {
+  return <LanguageLayer readStorage={readDemoStorage} writeStorage={writeDemoStorage}><WorkspaceContent/></LanguageLayer>;
 }
